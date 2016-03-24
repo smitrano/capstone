@@ -1,17 +1,17 @@
 body {
 	margin: 0px;
+	font-family:freight-sans-pro;
 }
 
 
 h1 {
-	font-family:freight-sans-pro;
 	font-weight: 300;
 	font-size: 5em;
 	color: white;
 }
 
 h2 {
-	font-family:helvetica;
+	font-weight: 300;
 	font-size: 4em;
 }
 
