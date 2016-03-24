@@ -5,6 +5,7 @@ body {
 
 h1 {
 	font-family:freight-sans-pro;
+	font-weight: 300;
 	font-size: 5em;
 	color: white;
 }
