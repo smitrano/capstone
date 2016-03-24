@@ -11,14 +11,12 @@ h1 {
 }
 
 h2 {
-	font-weight: 300;
 	font-size: 4em;
 }
 
 p {
 	font-size: 2em;
 }
-
 
 .header {
 	height: 20px;
@@ -38,13 +36,14 @@ p {
 }
 
 
+
 .landingtext {
 	margin-left: 25%;
 	margin-right: 25%;
 	text-align: center;
 	width: 50%;
 	position: absolute;
-	top: 30%
+	top: 35%
 }
 
 
