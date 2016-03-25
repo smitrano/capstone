@@ -73,7 +73,7 @@
 //image blocks hover states
 
  $('imageblock').hover(function() {
-      $(this).siblings().toggleClass('greyout');
+      $(this).toggleClass('greyout');
  });
 
 
