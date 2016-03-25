@@ -5,6 +5,9 @@
         width: '100%'
  	});
 
+
+//side navigation
+
  	$('.words1').css({opacity: '1'});
 	$('.inner-circle1').css({opacity: '1'});
 	$('.words2').css({opacity: '0'});
@@ -67,19 +70,10 @@
     });
 
 
+//image blocks hover states
 
-    $(window).on('click', function (e) {
-    	if (e.pageX < ($(window).width() / 4)) {
-			$('.special-friend').animate({marginLeft: "-=500px"});
-    	} else if (e.pageX > ($(window).width() - ($(window).width() / 4))) {
-			$('.special-friend').animate({marginLeft: "+=500px"});
-    	}
-	});
+ $('imageblock').hover(function() {
+      $(this).siblings().toggleClass('greyout');
+ });
 
-	$('panleft').on('click', function (e) {
-		$('.special-friend').animate({marginLeft: "+=500px"});
-	});
 
-	$('panright').on('click', function (e) {
-		$('.special-friend').animate({marginLeft: "+=500px"});
-	});
