@@ -137,6 +137,10 @@ p {
 }
 
 
+.greyout {
+	opacity: 0;
+}
+
 
 
 .pastwinner {
