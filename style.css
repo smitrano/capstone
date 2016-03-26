@@ -172,7 +172,17 @@ Students
 	background-position: right;
 }
 
+.students_slide6 {
+	background-image: url("assets/photos/noah.jpg");
+	background-size: cover;
+	background-position: right;
+}
 
+.students_slide7 {
+	background-image: url("assets/photos/ashley.jpg");
+	background-size: cover;
+	background-position: right;
+}
 
 
 .footer {
