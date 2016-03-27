@@ -71,16 +71,16 @@
 
     $(window).on('click', function (e) {
     	if (e.pageX < ($(window).width() / 4)) {
-			$('.special-friend').animate({marginLeft: "-=500px"});
+			$('.special-friend').animate({marginRight: "-=500px"});
     	} else if (e.pageX > ($(window).width() - ($(window).width() / 4))) {
-			$('.special-friend').animate({marginLeft: "+=500px"});
+			$('.special-friend').animate({marginRight: "+=500px"});
     	}
 	});
 
 	$('panleft').on('click', function (e) {
-		$('.special-friend').animate({marginLeft: "+=500px"});
+		$('.special-friend').animate({marginRight: "+=500px"});
 	});
 
 	$('panright').on('click', function (e) {
-		$('.special-friend').animate({marginLeft: "+=500px"});
+		$('.special-friend').animate({marginRight: "+=500px"});
 	});

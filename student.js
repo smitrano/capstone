@@ -1,9 +1,19 @@
    var winHeight = $(window).height();
 
+
     $('.slide').css({
         height: winHeight,
         width: '100%'
- 	});
+    });
+
+
+     $('.navbackground').css({
+        height: winHeight,
+    });
+
+    $('.arrow').css({
+        height: winHeight,
+    });
 
  	$('.words1').css({opacity: '1'});
 	$('.inner-circle1').css({opacity: '1'});
@@ -154,16 +164,16 @@
 
     $(window).on('click', function (e) {
     	if (e.pageX < ($(window).width() / 4)) {
-			$('.special-friend').animate({marginLeft: "-=500px"});
-    	} else if (e.pageX > ($(window).width() - ($(window).width() / 4))) {
 			$('.special-friend').animate({marginLeft: "+=500px"});
+    	} else if (e.pageX > ($(window).width() - ($(window).width() / 4))) {
+			$('.special-friend').animate({marginLeft: "-=500px"});
     	}
 	});
 
 	$('panleft').on('click', function (e) {
-		$('.special-friend').animate({marginLeft: "+=500px"});
+		$('.special-friend').animate({marginLeft: "-=500px"});
 	});
 
 	$('panright').on('click', function (e) {
-		$('.special-friend').animate({marginLeft: "+=500px"});
+		$('.special-friend').animate({marginLeft: "=500px"});
 	});

@@ -13,11 +13,15 @@ h1 {
 h2 {
 	font-weight: 300;
 	font-size: 4em;
+	color: #40BA87;
 }
 
 p {
-	font-size: 2em;
+	font-size: 1.8em;
+	color: #44286D;
 }
+
+
 
 .header {
 	height: 20px;
@@ -35,15 +39,6 @@ p {
   	margin-top: -50px;
   	padding-left: 15px;
 
-}
-
-
-.navbackground {
-	position: absolute;
-	left: 0px;
-	width: 500px;
-	height: 100%;
-	z-index: 90;
 }
 
 
@@ -142,7 +137,12 @@ Students
 ****************************
 ***************************/
 
-
+.navbackground {
+	position: absolute;
+	left: 0px;
+	width: 500px;
+	z-index: 90;
+}
 
 .slideimageleft {
 	width: 50%;
@@ -156,6 +156,29 @@ Students
 }
 
 
+.special-friend {
+    overflow: hidden;
+}
+
+.arrow {
+	position: absolute;
+	right: 0px;
+	width: 100px;
+	z-index: 90;
+	background-color: rgba(0, 0, 0, 0.28);
+}
+
+.arrow:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.arrow div {
+	position: absolute;
+	top:45%;
+	left: -10px;
+	opacity: .9;
+}
+
 .pastwinner {
 	width: 500px;
 	height: inherit;
@@ -163,8 +186,26 @@ Students
 	float: left;
 	background-image: url("assets/grid.png");
     background-repeat: repeat;
+    position: relative;
 }
 
+
+.pastwinner_learnmore {
+	bottom: 0;
+	padding: 30 0 30 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.38);
+	position: absolute;
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
+
+}
+
+.students_slide4 {
+	background-image: url("assets/grid.png");
+    background-repeat: repeat;
+}
 
 .students_slide5 {
 	background-image: url("assets/photos/casey.jpg");
