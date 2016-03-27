@@ -26,6 +26,14 @@ blockquote {
 	text-indent: -0.5em;
 	}
 
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color:black !important;
+}
+
 .quote {
 	font-weight: 300;
 	font-size: 4em;
@@ -135,10 +143,10 @@ blockquote {
 }
 
 .slidetextparagraph {
-	width: 50%;
+	width: 45%;
 	position: absolute;
-	left: 20%;
-	top: 30%;
+	left: 15%;
+	top: 20%;
 }
 
 .slideimages {
@@ -163,6 +171,10 @@ blockquote {
 Students
 ****************************
 ***************************/
+
+.sectionlinks p {
+	color: #F0543A;
+}
 
 .navbackground {
 	position: absolute;
@@ -191,10 +203,18 @@ Students
 
 .arrow {
 	position: absolute;
-	right: 0px;
-	width: 100px;
+	width: 90px;
 	z-index: 90;
-	background-color: rgba(0, 0, 0, 0.28);
+	background-color: rgba(0, 0, 0, 0.38);
+}
+
+.leftarrow {
+	left:400;
+}
+
+.rightarrow {
+	right: 0;
+
 }
 
 .arrow:hover {
@@ -204,7 +224,7 @@ Students
 .arrow div {
 	position: absolute;
 	top:45%;
-	left: -10px;
+	text-align: center;
 	opacity: .9;
 }
 
@@ -248,24 +268,25 @@ Students
 	color: #2E1C4F;
 }
 
-.students_slide4 {
+
+#students_slide4 {
 	background-image: url("assets/grid.png");
     background-repeat: repeat;
 }
 
-.students_slide5 {
+#students_slide5 {
 	background-image: url("assets/photos/casey.jpg");
 	background-size: cover;
 	background-position: right;
 }
 
-.students_slide6 {
+#students_slide6 {
 	background-image: url("assets/photos/noah.jpg");
 	background-size: cover;
 	background-position: right;
 }
 
-.students_slide7 {
+#students_slide7 {
 	background-image: url("assets/photos/ashley.jpg");
 	background-size: cover;
 	background-position: right;
