@@ -22,6 +22,45 @@ p {
 }
 
 
+blockquote {
+	text-indent: -0.5em;
+	}
+
+.quote {
+	font-weight: 300;
+	font-size: 4em;
+	color: black;
+}
+
+.slide{
+		position: relative;
+}
+
+.logo {
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	background-repeat: no-repeat;
+	margin: 35px;
+}
+
+	.logored {
+		background-image: url("assets/logo_red.svg");
+	}
+
+	.logowhite {
+		background-image: url("assets/logo_white.svg");
+	}
+
+.hamburger {
+	position: absolute;
+	right:35;
+	top: 35;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	opacity: .5;
+}
 
 .header {
 	height: 20px;
@@ -37,7 +76,7 @@ p {
 	height: 400px;
 	top: 50%;
   	margin-top: -50px;
-  	padding-left: 15px;
+  	padding-left: 30px;
 
 }
 
@@ -71,18 +110,6 @@ p {
 	margin-bottom: 10px;
 }
 
-.logo {
-	position: absolute;
-	width: 50px;
-	height: 50px;
-}
-
-.sandwich {
-	position: absolute;
-	right:0;
-	width: 50px;
-	height: 50px;
-}
 
 .landingtext {
 	margin-left: 25%;
@@ -140,7 +167,7 @@ Students
 .navbackground {
 	position: absolute;
 	left: 0px;
-	width: 500px;
+	width: 400px;
 	z-index: 90;
 }
 
@@ -158,6 +185,8 @@ Students
 
 .special-friend {
     overflow: hidden;
+    position: relative;
+    left: -100;
 }
 
 .arrow {
@@ -182,7 +211,7 @@ Students
 .pastwinner {
 	width: 500px;
 	height: inherit;
-	display: inline-block;
+	display: inline;
 	float: left;
 	background-image: url("assets/grid.png");
     background-repeat: repeat;
@@ -200,6 +229,23 @@ Students
 	color: white;
 	text-align: center;
 
+}
+
+
+.founderstext {
+	position: absolute;
+	left: 20%;
+	top: 100px;
+	width: 800px;
+}
+
+.students_slide1 {
+	background-image: url("assets/grid.png");
+    background-repeat: repeat;
+}
+
+.students_slide1 h1 {
+	color: #2E1C4F;
 }
 
 .students_slide4 {
@@ -254,8 +300,6 @@ Students
 .black {background-color: black;}
 
 .white {background-color: white;}
-
-
 
 
 
