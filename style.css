@@ -3,6 +3,7 @@
 body {
 	margin: 0px;
 	font-family:freight-sans-pro, calibri; 
+	-webkit-font-smoothing: antialiased;
 }
 
 
@@ -19,9 +20,12 @@ h2 {
 }
 
 p {
-	font-size: 1.8em;
+	font-size: 20pt;
 	color: #44286D;
+	font-weight: 400;
+	line-height: 28pt;
 }
+
 
 .darkyellow p {
 	color: #44286D !important;
@@ -85,6 +89,8 @@ a p:hover {
 	background-repeat: no-repeat;
 }
 
+
+
 .header {
 	height: 20px;
 	width: 100%;
@@ -100,10 +106,22 @@ a p:hover {
 	top: 50%;
   	margin-top: -50px;
   	padding-left: 30px;
+  	font-family: freight-micro-pro;
+  	font-style: italic;
+  	font-weight: 400;
+
 
 }
 
 
+.sidenav .words {
+	padding-left: 7px;
+}
+
+.sidenav .outer-side .words:hover { 
+	padding-left: 15px;
+	transition: all 0.3s ease;
+}
 
 
 .outer-circle {
@@ -136,13 +154,29 @@ a p:hover {
 }
 
 
+
+/***********************************************************************************************************************************************************
+Homepage
+***********************************************************************************************************************************************************/
+
+
 .landingtext {
 	margin-left: 25%;
 	margin-right: 25%;
 	text-align: center;
 	width: 45%;
 	position: absolute;
-	top: 35%
+	top: 28%
+}
+
+.landing_subhead {
+	margin: auto;
+	width: 60%;
+}
+
+.landing_subhead p {
+	color: white;
+	font-weight: 300;
 }
 
 
@@ -223,14 +257,28 @@ a p:hover {
 
 
 
+#home_slide1 {
+	background-image: url('assets/photos/landing.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #44286D;
+	background-blend-mode: multiply;
+	background-position: top;
+}
+
+
+#home_slide3 {
+	background-image: url('assets/photos/etsy_women.jpg');
+	background-position: -500px 0px;
+	background-size: contain;
+}
 
 
 
-/***************************
-****************************
+
+/***********************************************************************************************************************************************************
 Students
-****************************
-***************************/
+***********************************************************************************************************************************************************/
 
 .signup {
 	width: 60px;
@@ -268,6 +316,11 @@ Students
 
 #sectionlinks p {
 	color: #F0543A;
+	transition: all 0.5s ease;
+}
+
+#sectionlinks p:hover {
+	color: #2E1C4F;
 }
 
 .navbackground {
@@ -438,6 +491,7 @@ Students
 	left: 0px;
 	top: 0px;
 	z-index: 100;
+	transition:  0.2s ease;
 }
 
 .timelineblockbig h1 {
@@ -514,6 +568,11 @@ Students
 .landing {
 
 }
+
+/***********************************************************************************************************************************************************
+Startups
+***********************************************************************************************************************************************************/
+
 
 
 
