@@ -1,0 +1,937 @@
+body {
+	margin: 0px;
+	font-family:freight-sans-pro; 
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 70pt;
+	color: white;
+}
+
+h2 {
+	font-weight: 300;
+	font-size: 60pt;
+	color: #40BA87;
+	line-height: 1.3;
+}
+
+
+h3 {
+	font-weight: 300;
+	font-size: 25pt;
+	color: white;
+}
+
+h4 a {
+	font-size: 16pt; 
+	color: #40BA87;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s ease;
+
+}
+
+h4 a:hover {
+	padding-left: 10px;
+	transition: all 0.3s ease;
+}
+
+
+h5 {
+	font-family: freight-micro-pro;
+	font-size: 20pt;
+	font-weight: 400;
+	font-style: italic;
+}
+
+p {
+	font-size: 20pt;
+	color: #2E1C4F;
+	font-weight: 400;
+	line-height: 28pt;
+}
+
+a {
+	text-decoration: none;
+}
+
+b {
+	font-weight: 500;
+}
+
+mark {
+	background-color:  #FFF200;
+	padding: 0px 3px 0px 3px;
+}
+
+/***********************************************************************************************************************************************************
+Nav
+***********************************************************************************************************************************************************/
+
+#nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 600;
+}
+
+#nav img {
+	width: 75%;
+	height: auto;
+	opacity: .7;
+}
+
+#logo {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	text-align: left;
+}
+
+#hamburger {
+	position: absolute; 
+	top: 40px;
+	right: 40px;
+	text-align: right;
+}
+
+
+#menu {
+	width: 30%;
+	height: 100%;
+	position: absolute;
+	right: -30%;
+	background-color: black;
+	opacity: .8;
+	z-index: 500;
+	transition: right .4s ease-in-out;
+}
+
+.menutext {
+	padding: 100px;
+}
+
+.menutext p {
+	color: white;
+}
+
+
+.sidenav {
+	position: fixed;
+	z-index: 500;
+	width: 200px;
+	height: 400px;
+	top: 50%;
+  	margin-top: -50px;
+  	padding-left: 30px;
+  	font-family: freight-micro-pro;
+  	font-style: italic;
+  	font-weight: 400;
+
+
+}
+
+
+.sidenav .words {
+	padding-left: 7px;
+	  transition: all 0.3s ease;
+}
+
+.sidenav .outer-side .words:hover { 
+	padding-left: 15px;
+	transition: all 0.3s ease;
+}
+
+
+.outer-circle {
+	margin-top: 3px;
+	margin-left: 10px;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #fff;
+	border-radius: 100px;
+	position: absolute;
+}
+
+.inner-circle {
+	margin-top: 7px;
+	margin-left: 14px;
+	width: 6px;
+	height: 6px;
+	border-radius: 100px;
+	background-color: #fff;
+	position: absolute;
+}
+
+.words {
+	color: #fff;
+	margin-left: 28px;
+}
+
+.outer-side {
+	margin-bottom: 10px;
+	width: 150px;
+}
+
+
+
+
+.downarrow {
+	position: absolute;
+    bottom: 10%;
+    left: 50%;
+    margin-left: -50px;
+    text-align: center;
+    transition: all ease .3s;
+}
+
+.downarrow:hover {
+	padding-bottom: 10px;
+	transition: all ease .3s;
+}
+
+.downarrow p {
+	font-family: freight-micro-pro;
+	font-style: italic;
+	color: #F0543A;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.downarrow a {
+	text-decoration: none;
+}
+
+.subtext a {
+	text-decoration: none;
+	color: white;
+}
+
+.downarrow img {
+	width: 40px;
+}
+
+/***********************************************************************************************************************************************************
+Left & Right Half
+***********************************************************************************************************************************************************/
+
+.lefthalf{
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+} 
+
+.lefthalf .text {
+    margin-left: 25%;
+    width: 45%;
+    position: absolute;
+    top: 50%;
+    margin-top: -35%;
+}
+
+.righthalf{
+	height: 100%; 
+	width: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.righthalf .text {
+    margin-left: 15%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -35%;
+}
+
+/***********************************************************************************************************************************************************
+Home 0
+***********************************************************************************************************************************************************/
+
+#home_0 {
+
+}
+
+#home_0 .text {
+	width: 45%;
+	margin: auto;
+	text-align: center;
+}
+
+.subhead {
+	width: 70%;
+	margin: auto;
+}
+
+#home_0 .downarrow p {
+	color: white;
+	opacity: .5;
+}
+
+#home_0 .downarrow img {
+	opacity: .5;
+}
+
+
+
+
+/***********************************************************************************************************************************************************
+Home 1
+***********************************************************************************************************************************************************/
+
+
+
+.colorblock {
+	width: 50%;
+	height: 50%;
+	float: left;
+	background-image: url("assets/grid.png");
+	text-align: center;
+}
+
+.colorblock:hover {
+	background-color: black;
+}
+
+.colorblock img {
+	position: relative;
+    top: 50%;
+    margin-top: -267px;
+    width: 75%;
+}
+
+.block2 img, .block3 img {
+	position: relative;
+	left: -30px;
+}
+
+.holder {
+
+}
+
+.block1 {
+	background-color: #44286D;
+}
+
+.block2 {
+	background-color: #FFDE17;
+}
+
+.block3 {
+	background-color: #2B8D66;
+}
+
+.block4 {
+	background-color: #F0543A;
+}
+
+
+.how { 
+	padding: 10%;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+
+.how h2 {
+	font-size: 35pt;
+	color:  #2E1C4F;
+	font-weight: 400;
+}
+
+.how h6 {
+	font-size: 12pt;
+	font-weight: 600;
+	text-transform: none;
+	line-height: 1.3;
+}
+
+.how em {
+	font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.howtop {
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+}
+
+.howtop h6 {
+	padding-top: 8%;
+	padding-bottom: 3%;
+	color: #2E1C4F;
+	margin: 0px;
+}
+
+.howbottom {
+	display: block;
+	vertical-align: top;
+	width: 100%;
+}
+
+.howbottom h6 {
+	color: #F0543A;
+	padding-top: 5px;
+	margin: 0px;
+}
+
+.howbottom hr {
+	border: solid 1px #F0543A;
+}
+
+.how .chart {
+	margin-left: -6%;
+	width: 73%;
+	display: inline-block;
+}
+
+.how .chart img {
+	width: 100%;
+}
+
+.how .caption {
+	width: 25%;
+	display: inline-block;
+	padding-left: 4%;
+	margin: 0px;
+	vertical-align: top;
+}
+
+#template2 .howtop h6 {
+	color: #D7A31E;
+}
+/***********************************************************************************************************************************************************
+Home 2
+***********************************************************************************************************************************************************/
+
+#home_2 .lefthalf {
+	background-image: url("assets/photos/company_patagonia.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transition: opacity 0.2s ease-in-out;
+	transition: width 0.3s ease-in-out;
+	transition: background-image .3s ease-in-out;
+	z-index: 0;
+}
+
+.casestudies {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+
+}
+
+
+.companynames {
+    width: 100%;
+    height: ;
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+    z-index: 100;
+    margin: -3px;
+}
+
+.name {
+	width: 25%;
+	height: 100px;
+	display: inline-block;
+	margin: -2px;
+	transition: all ease .2s;
+}
+
+.nameexpanded {
+	height:200px;
+	width: 25%;
+	display: inline-block;
+	margin: -2px;
+	transition: all ease .3s;
+	z-index: 100;
+}
+
+.name:hover {
+	height:200px;
+	transition: all ease .2s;
+}
+
+
+/** after slide up **/
+
+.casestudiesexpanded {
+	width: 100%;
+    height: inherit;
+    position: relative;
+    top: 100%;
+    opacity: 0;
+    z-index: 50;
+    transition: top .4s ease;
+    transition-delay: top .1s;
+}
+
+.casestudiesexpanded .close {
+	width: 100px;
+	height: 50px;
+	background-color: black;
+	position: absolute;
+	top: 0; 
+	left: 50%;
+	margin-left: -50px;
+	color: white;
+	text-align: center;
+}
+.casestudiesexpanded .photo {
+	width: 25%;
+	height: 100%;
+	display: inline-block;
+	margin: -2px; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	transition: all ease .5s;
+}
+
+.casestudiesexpanded .photo1 {
+	background-image:  url("assets/photos/company_patagonia.jpg");
+}
+
+.casestudiesexpanded .photo2 {
+	background-image:  url("assets/photos/company_warbyparker.jpg");
+}
+
+.casestudiesexpanded .photo3 {
+	background-image:  url("assets/photos/company_etsy.jpg");
+}
+
+.casestudiesexpanded .photo4 {
+	background-image:  url("assets/photos/company_method.jpg");
+}
+
+.casestudiesexpanded .textarea {
+	width: 0px;
+	height: 100%;
+	background-color: white;
+	display: inline-block;
+	transition: all ease .5s;
+	margin:-2px;
+	vertical-align: top;
+}
+
+.showtext {
+	display: none;
+	transition: all ease-in-out .5s;
+}
+
+.showtext .text {
+	width: inherit;
+	height: 100%;
+	padding: 100px;
+	overflow: scroll;
+
+}
+
+.textarea1 {
+	transition: all ease .5s;
+}
+/***********************************************************************************************************************************************************
+Home 3
+***********************************************************************************************************************************************************/
+
+#home_3 {
+	z-index: 200;
+}
+
+#home_3 .text{
+	width: 50%;
+	margin: auto;
+}
+
+#home_3 .subtext {
+	width: 400px;
+	height: 600px;
+	float: left;
+	margin-left: 200px;
+
+}
+
+#home_3 h2{
+	color: white;
+	text-align: center;
+}
+
+#home_3 h3{
+	font-size: 35pt;
+	font-weight: 500;
+}
+
+#home_3 p{
+	color: white;
+}
+
+
+
+/***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************
+Startups 0
+***********************************************************************************************************************************************************/
+
+#startups_0 .downarrow p {
+	color: white;
+	opacity: .5;
+}
+
+#startups_0 .downarrow img {
+	opacity: .5;
+}
+
+#startups_0 {
+	text-align: center;
+}
+
+#startups_0 .text {
+	width: 45%;
+	margin: auto;
+}
+
+
+/***********************************************************************************************************************************************************
+Startups 1
+***********************************************************************************************************************************************************/
+
+
+#startups_1 .lefthalf {
+	background-image: url("assets/photos/startups.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+/***********************************************************************************************************************************************************
+Startups 2, 3, 4
+***********************************************************************************************************************************************************/
+
+.actionsteps {
+	position: absolute;
+	left: 300px;
+	top: 100px;
+}
+
+#startups_2 h2, #startups_3 h2, #startups_4 h2 {
+	color: white;
+}
+
+#startups_2 hr, #startups_3 hr, #startups_4 hr {
+	border: solid 1px white;
+}
+
+.actionsteps .steps {
+	margin: auto;
+	position: relative;
+	top: 100px;
+}
+
+.actionsteps .steps .item {
+	width: 250px;
+	height: 400px;
+	display: inline-block;
+	margin: 70px;
+}
+
+
+.steps .item p {
+	font-size: 15pt;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.steps .item h5 {
+	text-align: center;
+	margin: 30 0 20 0px;
+	color: #2E1C4F;
+}
+
+.steps .item img {
+	width: 150px;
+	height: auto;
+	position: relative;
+    left: 50%;
+    margin-left: -75px;
+}
+
+/***********************************************************************************************************************************************************
+Startups 6
+***********************************************************************************************************************************************************/
+
+#startups_6 .text{
+	width: 50%;
+	margin: auto;
+}
+#startups_6 h2{
+	color: white;
+	text-align: center;
+}
+
+#startups_6 p{
+	color: white;
+	text-align: center;
+}
+
+
+
+
+/***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************/
+/***********************************************************************************************************************************************************
+***********************************************************************************************************************************************************/
+
+/***********************************************************************************************************************************************************
+Students 0
+***********************************************************************************************************************************************************/
+
+#students_0 .downarrow p {
+	color: white;
+	opacity: .5;
+}
+
+#students_0 .downarrow img {
+	opacity: .5;
+}
+
+#students_0 {
+	text-align: center;
+}
+
+#students_0 .text {
+	width: 45%;
+	margin: auto;
+}
+
+/***********************************************************************************************************************************************************
+Students 2
+***********************************************************************************************************************************************************/
+
+.special-friend {
+    position: relative;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.rightarrow {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	z-index: 100;
+}
+
+.leftarrow {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 100;
+}
+
+
+.pastwinner {
+	width: 500px;
+	height: inherit;
+	display: inline-block;
+	background-image: url("assets/grid.png");
+    background-repeat: repeat;
+    position: relative;
+    margin: -2;
+    left: -100px;
+
+}
+
+
+.pastwinner_university {
+	top: 0;
+	padding: 50 0 0 0;
+	width: 100%;
+	position: absolute;
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	font-family: freight-micro-pro;
+	font-style: italic;
+	font-weight: 400;
+}
+
+	.darkyellow .pastwinner_university {
+	color: #44286D;
+	}
+
+
+.pastwinner_illustration {
+	position: absolute;
+	top: 30%;
+	width: 500px;
+	height: 600px;
+	text-align: center;
+}
+
+
+
+.pastwinner_learnmore {
+	bottom: 0;
+	padding: 30 0 30 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.38);
+	position: absolute;
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
+
+}
+
+
+/***********************************************************************************************************************************************************
+Students 3
+***********************************************************************************************************************************************************/
+
+#founder_1{
+	background-image: url("assets/photos/casey.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#founder_2{
+	background-image: url("assets/photos/noah.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+}
+
+#founder_3 {
+	background-image: url("assets/photos/ashley.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.quote {
+	font-weight: 300;
+	font-size: 4em;
+	color: #2E1C4F;
+}
+
+#students_3 .text {
+	position: relative;
+	left: 400px;
+	top: 0;
+	width: 850px;
+}
+
+
+#students_3 .text p {
+	font-family: freight-micro-pro;
+	font-size: 18pt;
+	font-weight: 400;
+	color: #F0543A;
+	padding-left: 45px;
+}
+
+#students_3 h4 {
+	padding-left: 45px;
+}
+
+#students_3 .quoteby {
+	text-transform: uppercase;
+	color: #2E1C4F !important;
+	font-size: 15pt !important;
+	font-family: freight-sans-pro !important;
+	font-weight: 500 !important;
+	letter-spacing: 1 !important;
+	margin-top: -30px;
+	margin-bottom: 100px;
+}
+
+blockquote {
+	text-indent: -0.5em;
+	}
+
+
+#founder_2 .text {
+	position: relative;
+	left: 1400px;
+	top: 0px;
+	width: 850px;
+}
+
+/***********************************************************************************************************************************************************
+Startups 1
+***********************************************************************************************************************************************************/
+
+
+#students_1 .lefthalf {
+	background-image: url("assets/photos/clio.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+}
+
+
+.red {background-color: #F0543A;}
+
+.lightyellow {background-color: #FFF200;}
+
+.darkyellow {background-color: #FFD31A;}
+
+.lightgreen {background-color: #40BA87; }
+
+.darkgreen {background-color: #2B8D66;}
+
+.lightpurple {background-color: #44286D;}
+
+.darkpurple {background-color: #2E1C4F;}
+
+.black {background-color: black;}
+
+.white {background-color: white;}
+
+
+/***********************************************************************************************************************************************************
+Media Queries
+***********************************************************************************************************************************************************/
+
+
+
+@media screen and (max-width: 1880px) {
+   h1 {
+   	font-size: 50pt;
+   }
+
+   h2 {
+    font-size: 45pt;
+   }
+
+   h3 {
+   	font-size: 20pt;
+   }
+   p {
+   	font-size: 18pt;
+   }
+}
