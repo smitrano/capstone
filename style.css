@@ -104,7 +104,7 @@ Nav
 	position: absolute;
 	right: -30%;
 	background-color: black;
-	opacity: .8;
+	opacity: .9;
 	z-index: 500;
 	transition: right .4s ease-in-out;
 }
@@ -115,7 +115,35 @@ Nav
 
 .menutext p {
 	color: white;
+	font-size: 30pt;
+	font-weight: 400;
+	margin-bottom: 15px;
+	position: relative;
+	left: -10px;
 }
+
+.menutext h5 {
+	color: white;
+	line-height: 1.8;
+	margin: 0px;
+	font-size: 15pt;
+
+}
+
+.menutext em {
+	font-style: italic;
+	font-family: freight-micro-pro;
+	font-size: 15pt;
+	font-weight: 600;
+	text-decoration: none;
+	color: white;
+	position: relative;
+	left: -15px;
+	top: -15px;
+	opacity: .5;
+
+}
+
 
 
 .sidenav {
@@ -327,12 +355,9 @@ Home 1
 	text-align: center;
 	z-index: 0;
 	cursor: pointer;
+	transition: ease-in-out all .5s;
 }
 
-.colorblock:hover {
-	background-color: black;
-	transition: all ease-in-out .2s;
-}
 
 .colorblock_overlay {
 	background-color: black;
@@ -432,6 +457,8 @@ Home 1
     height: 58px;
     z-index: 1000;
     margin: 50px;
+    visibility: hidden;
+    cursor: pointer;
 }
 
 .howtop {
@@ -710,8 +737,8 @@ Startups 2, 3, 4
 
 .actionsteps {
 	position: absolute;
-	left: 300px;
-	top: 100px;
+	left: 12%;
+	top: 10%;
 }
 
 #startups_2 h2, #startups_3 h2, #startups_4 h2 {
@@ -722,31 +749,33 @@ Startups 2, 3, 4
 	border: solid 1px white;
 	position: absolute;
 	left: 0px;
-	margin-top: -20px;
+	margin-top: -25px;
 }
 
 #startups_2 .steps hr, #startups_3  .steps hr, #startups_4  .steps hr {
 	border: solid 1px white;
 	position: relative;
-	margin-top: 0px;
+	margin-top: -10px;
+	margin-bottom: 5px;
 }
 
 .actionsteps .steps {
 	margin: auto;
 	position: relative;
-	top: 100px;
+	padding-top: 50px;
 }
 
 .actionsteps .steps .item {
-	width: 250px;
+	width: 280px;
 	height: 400px;
 	display: inline-block;
-	margin: 70px;
+	margin: 55px;
+	vertical-align: top;
 }
 
 
 .steps .item p {
-	font-size: 15pt;
+	font-size: 14pt;
 	font-weight: 500;
 	line-height: 1.5;
 }
@@ -1009,19 +1038,36 @@ Media Queries
 
 
 
-@media screen and (max-width: 1880px) {
+@media screen and (max-width: 1980px) {
    h1 {
    	font-size: 50pt;
    }
 
    h2 {
-    font-size: 45pt;
+    font-size: 40pt;
    }
 
    h3 {
    	font-size: 20pt;
    }
-   p {
-   	font-size: 18pt;
+
+   h4 a {
+   	font-size: 15pt;
    }
+
+
+   p {
+   	font-size: 15pt;
+   	line-height: 23pt;
+   }
+
+#home_3 .subtext {
+   	width: 300px;
+   	margin-left: 100px;
+   	margin-top: 50px;
+   }
+#home_3 h2 {
+	margin-top: 150px;
+   }
+
 }
