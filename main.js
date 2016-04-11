@@ -102,6 +102,27 @@ $(document).ready(function() {
     });   
 
 
+    $('.explore').on('click', function () {
+            $('.colorblock_overlay').css("opacity", "0");
+            $('.explore').css("visibility", "hidden");    
+    });
+
+
+    $('.clickblock1').on('click', function () {
+        if ($('.holder').hasClass('block1clicked')) {
+
+        } else {
+            $('.holder').html($('#template1').clone());
+            $('.holder').addClass('block1clicked');
+            $('.holder').removeClass('block2clicked block3clicked block4clicked');
+        }
+    });
+
+    $('.howclose').on('click', function () {
+            $('.holder').html($('#template0').clone());
+    });
+
+
     $('.block1').on('click', function () {
         if ($('.holder').hasClass('block1clicked')) {
 
@@ -111,6 +132,7 @@ $(document).ready(function() {
             $('.holder').removeClass('block2clicked block3clicked block4clicked');
         }
     });
+
     $('.block2').on('click', function () {
         if ($('.holder').hasClass('block2clicked')) {
 
@@ -143,6 +165,7 @@ $(document).ready(function() {
 
 
     $('.name').on('click', function () {
+        $('.casestudies').css("width", "100%");
         $('#home_2 .lefthalf').css("opacity", "0");
         $('.name').addClass('nameexpanded');
         $('.nameexpanded').removeClass('name');
@@ -156,6 +179,7 @@ $(document).ready(function() {
         $('.name').removeClass('nameexpanded');
         $('.casestudiesexpanded').css("top", "100%");
         $('.casestudiesexpanded').css("opacity", "0");
+        $('.casestudies').css("width", "50%");
     });
 
     $('.photo1').on('click', function () {
