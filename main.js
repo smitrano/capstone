@@ -32,6 +32,7 @@ $(document).ready(function() {
                 $('.block3').css({opacity: 0}).delay(800).animate({opacity: 1}, 400);
                 $('.block4').css({opacity: 0}).delay(1000).animate({opacity: 1}, 400);
                 $('.lefthalf').css({opacity: 0}).delay(400).animate({opacity: 1}, 400);
+                $('.explore').css({opacity: 0}).delay(800).animate({opacity: 1}, 400);
                 $('.text').css({opacity: 0}).delay(600).animate({opacity: 1}, 400);
                 $('.downarrow').css({opacity: 0}).delay(1000).animate({opacity: 1}, 800);
 
