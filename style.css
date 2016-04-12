@@ -121,13 +121,22 @@ Nav
 	position: relative;
 	left: -10px;
 }
+.menutext p:hover {
+	opacity: .5;
+	transition: ease-in-out .1s all;
+}
 
 .menutext h5 {
 	color: white;
 	line-height: 1.8;
 	margin: 0px;
 	font-size: 15pt;
+	transition: ease-in-out .1s all;
 
+}
+
+.menutext h5:hover {
+	opacity: .5;
 }
 
 .menutext em {
@@ -355,9 +364,8 @@ Home 1
 	text-align: center;
 	z-index: 0;
 	cursor: pointer;
-	transition: ease-in-out all .5s;
+	transition: ease-in-out all .3s;
 }
-
 
 .colorblock_overlay {
 	background-color: black;
@@ -368,6 +376,27 @@ Home 1
     opacity: .7;
     position: absolute;
     transition: all .5s ease-in-out;
+}
+
+.activated .colorblock_overlay {
+	background-color: white;
+	opacity: 0;
+}
+
+.activated .colorblock_overlay:hover {
+	opacity: 0;
+}
+
+.righthalfhover .colorblock_overlay {
+    opacity: .7;
+}
+
+.blockselected .colorblock_overlay {
+	opacity: .7;
+}
+
+.blockselected .colorblock.selected .colorblock_overlay {
+	opacity: 0;
 }
 
 .blockillustration {
@@ -382,6 +411,36 @@ Home 1
 
 }
 
+.colorblock .title {
+	position: absolute;
+    left: 20px;
+    top: 20px;
+    text-align: left;
+}
+
+.colorblock .number {
+	border: solid white 2px;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: inline-block;
+    font-family: freight-micro-pro;
+    font-weight: 500;
+    font-size: 18pt;
+    line-height: 20pt;
+    color: white;
+    font-style: italic;
+}
+
+.colorblock p {
+	display: inline-block;
+	margin: 0px 0px 0px 10px;
+	font-family: freight-micro-pro;
+    font-style: italic;
+    color: white;
+    font-size: 17pt;
+}
 #img1 {
 	background-image: url("assets/illustrations/block1.png");
 }
@@ -411,18 +470,33 @@ Home 1
 	background-color: #44286D;
 }
 
+.block1.activated.selected {
+	background-color: #241539;
+}
+
 .block2 {
 	background-color: #FFDE17;
+}
+
+.block2.activated.selected {
+	background-color: #B99B30;
 }
 
 .block3 {
 	background-color: #2B8D66;
 }
 
+.block3.activated.selected {
+	background-color: #1C5A41;
+}
+
 .block4 {
 	background-color: #F0543A;
 }
 
+.block4.activated.selected {
+	background-color: #B83B29;
+}
 
 .how { 
 	padding: 10%;
@@ -847,6 +921,16 @@ Students 0
 /***********************************************************************************************************************************************************
 Students 2
 ***********************************************************************************************************************************************************/
+.navbackground {
+	width: 400px;
+	height: inherit;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	background-color: #2E1C4F;
+}
+
 
 .special-friend {
     position: relative;
@@ -861,6 +945,8 @@ Students 2
 	top: 50%;
 	right: 0;
 	z-index: 100;
+	background-color: black;
+	opacity: .5;
 }
 
 .leftarrow {
@@ -868,8 +954,10 @@ Students 2
 	height: 50px;
 	position: absolute;
 	top: 50%;
-	left: 0;
+	left: 399px;
 	z-index: 100;
+	background-color: black;
+	opacity: .5;
 }
 
 
@@ -880,15 +968,34 @@ Students 2
 	background-image: url("assets/grid.png");
     background-repeat: repeat;
     position: relative;
-    margin: -2;
+    margin-left: -2px;
+    margin-right: -2px;
     left: -100px;
 
 }
 
+.pastwinner h3 {
+	font-family: freight-sans-pro;
+	font-style: normal;
+	color: white;
+	font-size: 30pt;
+	padding-top: 30px;
+}
+
+.pastwinner a {
+	color: white;
+}
+
+.pastwinner p {
+	white-space: normal;
+    padding: 100px 50px 0px 50px;
+    text-align: left;
+    color: white;
+}
 
 .pastwinner_university {
 	top: 0;
-	padding: 50 0 0 0;
+	padding: 50px 0px 0px 0px;
 	width: 100%;
 	position: absolute;
 	color: white;
@@ -916,7 +1023,7 @@ Students 2
 
 .pastwinner_learnmore {
 	bottom: 0;
-	padding: 30 0 30 0;
+	padding: 30px 0px 30px 0px;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.38);
 	position: absolute;
@@ -1040,7 +1147,7 @@ Media Queries
 
 @media screen and (max-width: 1980px) {
    h1 {
-   	font-size: 50pt;
+   	font-size: 45pt;
    }
 
    h2 {

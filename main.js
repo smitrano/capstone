@@ -36,8 +36,10 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
         touchSensitivity: 20,
+        normalScrollElements: '.showtext',
         onLeave: function(index, nextIndex, direction){
             if (nextIndex === 1){
+                $('.colorblock').css({opacity: 0});
                 $('.words1').css({opacity: '1'});
                 $('.inner-circle1').css({opacity: '1'});
                 $('.words2').css({opacity: '0'});
@@ -314,173 +316,69 @@ $(document).ready(function() {
 
 
 
-//////////BLOCK CLICKS////////////
+////////// COLOR BLOCKS ////////////
 
-    $('.clickblock1').on('click', function () {
-        if ($('.holder').hasClass('block1clicked')) {
 
-        } else {
+
+
+$('.explore').on('click', function () {
+    $('.explore').css("visibility", "hidden");   
+    $('.colorblock').addClass('activated'); 
+
+    $('.righthalf').on('mouseenter', function () {
+        $('.righthalf').addClass('righthalfhover');
+    });
+
+    $('.righthalf').on('mouseover', function () {
+        $('.righthalf').addClass('righthalfhover');
+    });
+
+    $('.righthalf').on('mouseleave', function () {
+        $('.righthalf').removeClass('righthalfhover');
+
+    }); 
+
+
+    if ($('.colorblock').hasClass('activated')) {
+        $('.colorblock').on('click', setBlock);
+
+    }
+
+    function setBlock () {
+        var selectedBlock = $(this);
+        $('.colorblock').removeClass('selected');
+        selectedBlock.addClass('selected');
+        $('.righthalf').addClass('blockselected');
+        $('.lefthalf').css({opacity: 0}).animate({opacity: 1}, 400);
+
+        if (selectedBlock.hasClass('block1')) {
             $('.holder').html($('#template1').clone());
-            $('.holder').addClass('block1clicked');
-            $('.holder').removeClass('block2clicked block3clicked block4clicked');
-            $('.colorblock_overlay').css("opacity", "0");
-            $('.explore').css("visibility", "hidden");   
-            $('.colorblock').addClass('activated'); 
-
         }
 
-    });
+        if (selectedBlock.hasClass('block2')) {
+            $('.holder').html($('#template2').clone());
+        }
+
+        if (selectedBlock.hasClass('block3')) {
+            $('.holder').html($('#template3').clone());
+        }
+
+        if (selectedBlock.hasClass('block4')) {
+            $('.holder').html($('#template4').clone());
+        }
+
+        $('.howclose').css("visibility", "visible");
+    }
 
 
     $('.howclose').on('click', function () {
             $('.holder').html($('#template0').clone());
             $('.howclose').css("visibility", "hidden");
+            $('.righthalf').removeClass('blockselected');
+            $('.colorblock').removeClass('selected');
 
     });
 
-
-
-$('.explore').on('click', function () {
-    $('.colorblock_overlay').css("opacity", "0");
-    $('.explore').css("visibility", "hidden");   
-    $('.colorblock').addClass('activated'); 
-
-    if($('.colorblock').hasClass('activated')) {
-
-
-
-            $('.block1').on('click', function () {
-                if ($('.holder').hasClass('block1clicked') ) {
-
-                } else {
-                    $('.holder').html($('#template1').clone());
-                    $('.howclose').css("visibility", "visible");
-                    $('.holder').addClass('block1clicked');
-                    $('.holder').removeClass('block2clicked block3clicked block4clicked');
-                    $('.block2').css("opacity", ".2");
-                    $('.block3').css("opacity", ".2");
-                    $('.block4').css("opacity", ".2");
-                    $('.block1').css("background-color", "#241539");
-                }
-
-
-            });
-
-        
-            $('.block1').on('mouseenter', function () {
-                if(!$('.holder').hasClass('block1clicked,')) {
-                    $('.block1').css("opacity", "1");
-                    $('.block2').css("opacity", ".2");
-                    $('.block3').css("opacity", ".2");
-                    $('.block4').css("opacity", ".2");
-                }
-            });
-
-        
-            $('.block1').on('mouseleave', function () {
-                if(!$('.holder').hasClass('block1clicked')) {
-                    $('.block1').css("opacity", "1");
-                    $('.block2').css("opacity", "1");
-                    $('.block3').css("opacity", "1");
-                    $('.block4').css("opacity", "1");
-                }
-            });
-
-
-            $('.block2').on('click', function () {
-                if ($('.holder').hasClass('block2clicked')) {
-
-                } else {
-                    $('.holder').html($('#template2').clone());
-                    $('.howclose').css("visibility", "visible");
-                    $('.holder').addClass('block2clicked');
-                    $('.holder').removeClass('block1clicked block3clicked block4clicked');
-                    $('.block1').css("opacity", ".2");
-                    $('.block3').css("opacity", ".2");
-                    $('.block4').css("opacity", ".2");
-                    $('.block2').css("background-color", "#B99B30");
-                }
-            });
-
-            $('.block2').on('mouseenter', function () {
-                if(!$('.holder').hasClass('block2clicked')) {
-                    $('.block1').css("opacity", ".2");
-                    $('.block2').css("opacity", "1");
-                    $('.block3').css("opacity", ".2");
-                    $('.block4').css("opacity", ".2");
-                }
-            });
-
-            $('.block2').on('mouseleave', function () {
-                if(!$('.holder').hasClass('block2clicked')) {
-                    $('.block1').css("opacity", "1");
-                    $('.block2').css("opacity", "1");
-                    $('.block3').css("opacity", "1");
-                    $('.block4').css("opacity", "1");
-                }
-            });
-
-
-            $('.block3').on('click', function () {
-                if ($('.holder').hasClass('block3clicked')) {
-
-                } else {
-                    $('.holder').html($('#template3').clone());
-                    $('.howclose').css("visibility", "visible");
-                    $('.holder').addClass('block3clicked');
-                    $('.holder').removeClass('block2clicked block1clicked block4clicked');
-                    $('.block1').css("opacity", ".2");
-                    $('.block2').css("opacity", ".2");
-                    $('.block4').css("opacity", ".2");
-                    $('.block3').css("background-color", "#1C5A41");
-                }
-            });
-
-            $('.block3').on('mouseenter', function () {
-                    $('.block1').css("opacity", ".2");
-                    $('.block2').css("opacity", ".2");
-                    $('.block3').css("opacity", "1");
-                    $('.block4').css("opacity", ".2");
-            });
-
-            $('.block3').on('mouseleave', function () {
-                    $('.block1').css("opacity", "1");
-                    $('.block2').css("opacity", "1");
-                    $('.block3').css("opacity", "1");
-                    $('.block4').css("opacity", "1");
-            });
-
-
-            $('.block4').on('click', function () {
-                if ($('.holder').hasClass('block4clicked')) {
-
-                } else {
-                    $('.holder').html($('#template4').clone());
-                    $('.howclose').css("visibility", "visible");
-                    $('.holder').addClass('block4clicked');
-                    $('.holder').removeClass('block2clicked block3clicked block1clicked');
-                    $('.block1').css("opacity", ".2");
-                    $('.block2').css("opacity", ".2");
-                    $('.block3').css("opacity", ".2");
-                    $('.block4').css("background-color", "#B83B29");
-                }
-            });
-
-            $('.block4').on('mouseenter', function () {
-                    $('.block1').css("opacity", ".2");
-                    $('.block2').css("opacity", ".2");
-                    $('.block3').css("opacity", ".2");
-                    $('.block4').css("opacity", "1");
-            });
-
-            $('.block4').on('mouseleave', function () {
-                    $('.block1').css("opacity", "1");
-                    $('.block2').css("opacity", "1");
-                    $('.block3').css("opacity", "1");
-                    $('.block4').css("opacity", "1");
-            });
-
-    } 
 
 });
 
@@ -488,55 +386,145 @@ $('.explore').on('click', function () {
     $('.name').on('click', function () {
         $('.casestudies').css("width", "100%");
         $('#home_2 .lefthalf').css("opacity", "0");
-        $('.name').addClass('nameexpanded');
-        $('.nameexpanded').removeClass('name');
+        $('.name').css("visibility", "hidden");
         $('.casestudiesexpanded').css("top", "0");
         $('.casestudiesexpanded').css("opacity", "1");
     });
 
     $('.close').on('click', function () {
+        $('.casestudies').css("width", "50%");
         $('#home_2 .lefthalf').css("opacity", "1");
-        $('.nameexpanded').addClass('name');
-        $('.name').removeClass('nameexpanded');
+        $('.name').css("visibility", "visible");
         $('.casestudiesexpanded').css("top", "100%");
         $('.casestudiesexpanded').css("opacity", "0");
-        $('.casestudies').css("width", "50%");
     });
+
+
+
+
 
     $('.photo1').on('click', function () {
         if ($('.photo1').hasClass('photo1clicked')) {
             $('.textarea1').css("width", "0%");
+            $('.photo1').css("width", "25%");
             $('.photo2').css("width", "25%");
             $('.photo3').css("width", "25%");
             $('.photo4').css("width", "25%");
-            $('.showtext').css("display", "none");
+            $('.showtext1').css("display", "none");
             $('.photo1').removeClass('photo1clicked');
         } else {
-            $('.textarea1').css("width", "39%");
-            $('.photo2').css("width", "12%");
-            $('.photo3').css("width", "12%");
-            $('.photo4').css("width", "12%");
-            setTimeout(function() { 
-                $('.showtext').css("display", "inline");
-            }, 400);
-            $('.photo1').addClass('photo1clicked');
+
+            if (!$('.photo2').hasClass('photo2clicked') 
+            && !$('.photo3').hasClass('photo3clicked') 
+            && !$('.photo4').hasClass('photo4clicked')) {
+
+                $('.textarea1').css("width", "39%");
+                $('.photo2').css("width", "12%");
+                $('.photo3').css("width", "12%");
+                $('.photo4').css("width", "12%");
+                setTimeout(function() { 
+                    $('.showtext1').css("display", "inline");
+                }, 400);
+                $('.photo1').addClass('photo1clicked');
+            }
+        }
+    });
+
+    $('.photo2').on('click', function () {
+        if ($('.photo2').hasClass('photo2clicked')) {
+            $('.textarea2').css("width", "0%");
+            $('.photo1').css("width", "25%");
+            $('.photo2').css("width", "25%");
+            $('.photo3').css("width", "25%");
+            $('.photo4').css("width", "25%");
+            $('.showtext2').css("display", "none");
+            $('.photo2').removeClass('photo2clicked');
+        } else {
+
+            if (!$('.photo1').hasClass('photo1clicked') 
+            && !$('.photo3').hasClass('photo3clicked') 
+            && !$('.photo4').hasClass('photo4clicked')) {
+
+                $('.textarea2').css("width", "39%");
+                $('.photo1').css("width", "12%");
+                $('.photo3').css("width", "12%");
+                $('.photo4').css("width", "12%");
+                setTimeout(function() { 
+                    $('.showtext2').css("display", "inline");
+                }, 400);
+                $('.photo2').addClass('photo2clicked');
+            }
+        }
+    });
+
+    $('.photo3').on('click', function () {
+        if ($('.photo3').hasClass('photo3clicked')) {
+            $('.textarea3').css("width", "0%");
+            $('.photo1').css("width", "25%");
+            $('.photo2').css("width", "25%");
+            $('.photo3').css("width", "25%");
+            $('.photo4').css("width", "25%");
+            $('.showtext3').css("display", "none");
+            $('.photo3').removeClass('photo3clicked');
+        } else {
+
+            if (!$('.photo1').hasClass('photo1clicked') 
+            && !$('.photo2').hasClass('photo3clicked') 
+            && !$('.photo4').hasClass('photo4clicked')) {
+
+                $('.textarea3').css("width", "39%");
+                $('.photo1').css("width", "12%");
+                $('.photo2').css("width", "12%");
+                $('.photo4').css("width", "12%");
+                setTimeout(function() { 
+                    $('.showtext3').css("display", "inline");
+                }, 400);
+                $('.photo3').addClass('photo3clicked');
+            }
+        }
+    });
+
+    $('.photo4').on('click', function () {
+        if ($('.photo4').hasClass('photo4clicked')) {
+            $('.textarea4').css("width", "0%");
+            $('.photo1').css("width", "25%");
+            $('.photo2').css("width", "25%");
+            $('.photo3').css("width", "25%");
+            $('.photo4').css("width", "25%");
+            $('.showtext4').css("display", "none");
+            $('.photo4').removeClass('photo4clicked');
+        } else {
+
+            if (!$('.photo1').hasClass('photo1clicked') 
+            && !$('.photo2').hasClass('photo3clicked') 
+            && !$('.photo3').hasClass('photo4clicked')) {
+
+                $('.textarea4').css("width", "39%");
+                $('.photo1').css("width", "12%");
+                $('.photo2').css("width", "12%");
+                $('.photo3').css("width", "12%");
+                setTimeout(function() { 
+                    $('.showtext4').css("display", "inline");
+                }, 400);
+                $('.photo4').addClass('photo4clicked');
+            }
         }
     });
 
 
-    $('.name1').on('mouseenter', function () {
+    $('.name1').hover(function () {
         $('#home_2 .lefthalf').css({"background-image": "url(assets/photos/company_patagonia.jpg)"});
     });
 
-    $('.name2').on('mouseenter', function () {
+    $('.name2').hover(function () {
         $('#home_2 .lefthalf').css({"background-image": "url(assets/photos/company_warbyparker.jpg)"});
     });
 
-    $('.name3').on('mouseenter', function () {
+    $('.name3').hover(function () {
         $('#home_2 .lefthalf').css({"background-image": "url(assets/photos/company_etsy.jpg)"});
     });
 
-    $('.name4').on('mouseenter', function () {
+    $('.name4').hover(function () {
         $('#home_2 .lefthalf').css({"background-image": "url(assets/photos/company_method.jpg)"});
     });
 
