@@ -46,6 +46,7 @@ h5 {
 	font-style: italic;
 }
 
+
 p {
 	font-size: 20pt;
 	color: #2E1C4F;
@@ -65,6 +66,8 @@ mark {
 	background-color:  #FFF200;
 	padding: 0px 3px 0px 3px;
 }
+
+
 
 /***********************************************************************************************************************************************************
 Nav
@@ -331,7 +334,7 @@ Home 1
 	margin-left: -100px;
 	margin-top: -30px;
 	z-index: 160;
-	border: solid 1px white;
+	border: solid 2px white;
 	text-align: center;
 	transition: all .2s ease-in-out;
 	cursor: pointer;
@@ -351,7 +354,7 @@ Home 1
 	font-family: freight-micro-pro;
 	font-style: italic;
 	font-size: 18pt;
-	font-weight: 500;
+	font-weight: 600;
 	margin: 14px;
 }
 
@@ -717,7 +720,8 @@ Home 2
 .showtext .text {
 	width: inherit;
 	height: 100%;
-	padding: 100px;
+	padding-left: 100px;
+	padding-right: 100px;
 	overflow: scroll;
 
 }
@@ -829,30 +833,41 @@ Startups 2, 3, 4
 #startups_2 .steps hr, #startups_3  .steps hr, #startups_4  .steps hr {
 	border: solid 1px white;
 	position: relative;
-	margin-top: -10px;
+	margin-top: -15px;
 	margin-bottom: 5px;
 }
 
 .actionsteps .steps {
-	margin: auto;
+	left: 50%;
+	margin-left: -570px;
 	position: relative;
 	padding-top: 50px;
 }
 
 .actionsteps .steps .item {
-	width: 280px;
+	width: 260px;
 	height: 400px;
 	display: inline-block;
-	margin: 55px;
+	margin: 50px;
 	vertical-align: top;
 }
 
 
 .steps .item p {
-	font-size: 14pt;
+	font-size: 15pt;
 	font-weight: 500;
 	line-height: 1.5;
 }
+
+
+#startups_3 .steps .item h5 {
+	color: white;
+}
+
+#startups_4 .steps .item h5 {
+	color: white;
+}
+
 
 .steps .item h5 {
 	text-align: center;
@@ -861,11 +876,11 @@ Startups 2, 3, 4
 }
 
 .steps .item img {
-	width: 150px;
+	width: 250px;
 	height: auto;
 	position: relative;
     left: 50%;
-    margin-left: -75px;
+    margin-left: -125px;
 }
 
 /***********************************************************************************************************************************************************
@@ -1019,7 +1034,15 @@ Students 2
 	text-align: center;
 }
 
+.pastwinner .text {
+	width: 100%;
+	position: absolute;
+	top: 62%;
+}
 
+.pastwinner.darkyellow .text p {
+	color: #44286D; 
+}
 
 .pastwinner_learnmore {
 	bottom: 0;
@@ -1030,7 +1053,11 @@ Students 2
 	font-size: 1.5em;
 	color: white;
 	text-align: center;
+	cursor: pointer;
 
+}
+.pastwinner_learnmore:hover {
+	background-color: rgba(0, 0, 0, 0.6);
 }
 
 
