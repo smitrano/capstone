@@ -15,6 +15,16 @@ $(document).ready(function() {
     $('.words7').css({opacity: '0'});
     $('.inner-circle7').css({opacity: '0'});
 
+//side nav color switcher //
+
+    if ($('body').hasClass('index') ) {
+        $('#hamnav').attr('src','assets/hamburger_white.png');
+        $('#logonav').attr('src','assets/logo_white.png');
+
+    }
+    
+// menu color switcher //
+
     if ($('body').hasClass('index') ) {
         $('#hamnav').attr('src','assets/hamburger_white.png');
         $('#logonav').attr('src','assets/logo_white.png');
@@ -38,12 +48,8 @@ $(document).ready(function() {
     $('#fullpage').fullpage({
         anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
         scrollingSpeed: 1000,
-        autoScrolling: true,
-        fitToSection: true,
-        fitToSectionDelay: 1000,
         touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
-        normalScrollElements: '.showtext',
+        normalScrollElements: '.casetext',
         afterLoad: function (index) {
             currentIndex = index;
             $('.up_onload').css({'visibility':'visible'});
@@ -139,7 +145,6 @@ $(document).ready(function() {
                 $('.explore_casestudies').css({opacity: 0}).delay(1200).animate({opacity: 1}, 600);
                 $('.righthalf').animate({opacity: 0}, 400).delay(400).animate({opacity: 1}, 400);
                 $('.lefthalf').animate({opacity: 0}, 400).delay(600).animate({opacity: 1}, 400);
-                $('.downarrow').animate({opacity: 0}, 400).delay(1000).animate({opacity: 1}, 400);
                 $('.casestudies').animate({opacity: 0}, 400).delay(600).animate({opacity: 1}, 200);
 
                 $('.words1').css({opacity: '0'});
@@ -332,7 +337,24 @@ $(document).ready(function() {
         }
     });   
 
+////////// select STARTUP or STUDENT ////////////
 
+
+     // $('#selectstartup a').on('mouseenter', function () {
+     //    $('.fp-viewing-fourthPage').addClass('red');
+     // });
+
+     // $('#selectstartup a').on('mouseleave', function () {
+     //    $('.fp-viewing-fourthPage').removeClass('red');
+     // });
+
+     // $('#selectstudent a').on('mouseenter', function () {
+     //    $('.fp-viewing-fourthPage').addClass('darkyellow');
+     // });
+
+     // $('#selectstudent a').on('mouseleave', function () {
+     //    $('.fp-viewing-fourthPage').removeClass('darkyellow');
+     // });
 
 ////////// COLOR BLOCKS ////////////
 
@@ -341,6 +363,7 @@ $(document).ready(function() {
 $('.explore').on('click', function () {
     $('.explore').css("visibility", "hidden");   
     $('.colorblock').addClass('activated'); 
+    $('#to_casestudies').css("visibility", "visible");
 
     $('.righthalf').on('mouseenter', function () {
         $('.righthalf').addClass('righthalfhover');
@@ -477,8 +500,8 @@ $('.explore_casestudies').on('click', function () {
             $('.howclose_company').css("visibility", "hidden");
             $('.lefthalf').removeClass('blockselected');
             $('.companyblock').removeClass('selected');
-            $('.companyblock').removeClass('activated');
-            $('.explore_casestudies').css("visibility", "visible");
+            // $('.companyblock').removeClass('activated');
+            // $('.explore_casestudies').css("visibility", "visible");
 
     });
 

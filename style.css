@@ -24,12 +24,18 @@ h3 {
 	color: white;
 }
 
+h3 a:hover {
+	padding-left: 10px;
+	transition: all 0.3s ease-in-out;
+}
+
 h4 a {
+	padding-left: 0px; 
 	font-size: 16pt; 
 	color: #40BA87;
 	font-weight: 600;
 	text-decoration: none;
-	transition: all 0.3s ease;
+	transition: all 0.3s ease-in-out;
 
 }
 
@@ -51,19 +57,23 @@ p {
 	font-size: 20pt;
 	color: #2E1C4F;
 	font-weight: 400;
-	line-height: 28pt;
+	line-height: 29pt;
 }
 
 a {
 	text-decoration: none;
 }
 
-b {
+h1 b {
 	font-weight: 500;
 }
 
+b {
+	font-weight: 600;
+}
+
 mark {
-	background-color:  #FFF200;
+	background-color:  rgba(255, 211, 26, 0.5);
 	padding: 0px 3px 0px 3px;
 }
 
@@ -310,7 +320,7 @@ Left & Right Half
 }
 
 .righthalf .text {
-    margin-left: 15%;
+    margin-left: 13%;
     width: 50%;
     position: absolute;
     top: 50%;
@@ -414,7 +424,7 @@ Home 1
 }
 
 .activated .colorblock_overlay {
-	background-color: white;
+	background-color: black;
 	opacity: 0;
 }
 
@@ -423,11 +433,11 @@ Home 1
 }
 
 .righthalfhover .colorblock_overlay {
-    opacity: .7;
+    opacity: .8;
 }
 
 .blockselected .colorblock_overlay {
-	opacity: .7;
+	opacity: .8;
 }
 
 .blockselected .colorblock.selected .colorblock_overlay {
@@ -617,6 +627,10 @@ Home 1
 #template2 .howtop h6 {
 	color: #D7A31E;
 }
+
+#to_casestudies {
+	visibility: hidden;
+}
 /***********************************************************************************************************************************************************
 Home 2
 ***********************************************************************************************************************************************************/
@@ -629,7 +643,7 @@ Home 2
 }
 
 .howclose_company {
-	float: left;
+	position: absolute;
     background-image: url('assets/x.png');
     width: 57px;
     height: 58px;
@@ -745,6 +759,91 @@ Home 2
 	opacity: 0;
 }
 
+.holder_company {
+	height: inherit;
+
+}
+
+.case {
+	overflow: scroll;
+	height: 100%;
+	position: absolute;
+}
+
+.casetext {
+	width: inherit;
+}
+
+.casetext .main {
+	 padding: 50px 300px 50px 275px;
+}
+
+.casetext .practices {
+	 padding: 0px 0px 0px 0px;
+}
+
+.casetext h2 {
+	margin-bottom: 25px;
+    margin-left: -5px;
+}
+
+.casetext h3 {
+	font-weight: 300;
+    font-size: 30pt;
+    margin-left: -50px;
+    color: #40BA87;
+}
+
+.casetext p {
+	margin-left: 0px;
+}
+
+.casetext h4 {
+	font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    color: #40BA87;
+    padding-top: 40px;
+}
+
+.casetext h5 {
+	padding: 15px 15px 15px 29%;
+	margin: 0px;
+	font-family: freight-sans-pro;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 30pt;
+	color: white;
+}
+
+.casetext hr {
+	width: 50px;
+    margin: 0px;
+    border: 1px solid #44286D;
+}
+
+
+.casetext .category {
+	padding: 100px 200px 100px 100px;
+}
+
+.casetext .icon {
+	display: inline-block;
+    width: 29%;
+    vertical-align: top;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.casetext .icon img {
+	width: 200px;
+}
+
+.casetext .description {
+	display: inline-block;
+	width: 70%;
+
+}
 /***********************************************************************************************************************************************************
 Home 3
 ***********************************************************************************************************************************************************/
@@ -760,9 +859,10 @@ Home 3
 
 #home_3 .subtext {
 	width: 400px;
-	height: 600px;
+	height: 30px;
 	float: left;
 	margin-left: 200px;
+	margin-bottom: 300px;
 
 }
 
@@ -1062,7 +1162,7 @@ Students 2
 .pastwinner .text {
 	width: 100%;
 	position: absolute;
-	top: 62%;
+	top: 72%;
 }
 
 .pastwinner.darkyellow .text p {
@@ -1070,6 +1170,7 @@ Students 2
 }
 
 .pastwinner_learnmore {
+	visibility: hidden;
 	bottom: 0;
 	padding: 30px 0px 30px 0px;
 	width: 100%;
@@ -1116,11 +1217,19 @@ Students 3
 	color: #2E1C4F;
 }
 
+.fp-controlArrow.fp-prev  {
+	left: 450px;
+}
+
+.fp-controlArrow.fp-next  {
+	right: 3%;
+}
+
 #students_3 .text {
 	position: relative;
-	left: 400px;
+	left:26%;
 	top: 0;
-	width: 850px;
+	width: 750px;
 }
 
 
@@ -1154,7 +1263,7 @@ blockquote {
 
 #founder_2 .text {
 	position: relative;
-	left: 1400px;
+	left: 57%;
 	top: 0px;
 	width: 850px;
 }
@@ -1204,11 +1313,11 @@ Startups 1
 }
 
 
-.red {background-color: #F0543A;}
+.red {background-color: #F0543A !important;}
 
-.lightyellow {background-color: #FFF200;}
+.lightyellow {background-color: #FFF200 !important;}
 
-.darkyellow {background-color: #FFD31A;}
+.darkyellow {background-color: #FFD31A !important;}
 
 .lightgreen {background-color: #40BA87; }
 

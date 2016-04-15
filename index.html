@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Good Inc. | Home 2 </title>
+	<title>Good Inc. | Home </title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="jquery.fullPage.min.js"></script>
 	<script src="http://code.jquery.com/color/jquery.color-2.1.0.js"></script>
@@ -24,22 +24,25 @@
 	background-repeat: no-repeat;
 	background-blend-mode: multiply;
 	background-size: cover;
-	transition: all .5s ease;
+	transition: background-color .5s ease;
 	}
 
 	.fp-viewing-secondPage {
 	background-color: white;
-	transition: all .5s ease;
+	transition: background-color .5s ease;
 	}
 
 	.fp-viewing-thirdPage {
 	background-color: white;
-	transition: all .5s ease;
+	transition: background-color .5s ease;
 	}
 
 	.fp-viewing-fourthPage {
 	background-color: #44286D;
-	transition: all .5s ease;
+	transition: background-color .5s ease;
+	background-image: url("assets/grid.png");
+	background-repeat: repeat;
+	background-blend-mode: multiply;
 	}
 	</style>
 
@@ -153,9 +156,12 @@
 	    			<div class="text">
 		    			<h2>Doing good for the world is good for business.</h2>
 		    			<p><b>It's not about corporate philanthropy.</b> Sustainable, purpose-driven businesses have advantages in the market that allow them to outperform their more traditional peers.</p>
+		    			<h4>
+							<a href="#" class="viewcasestudies">See the data &#8702;</a>
+						</h4>
 	    			</div>
 	    		</div>
-	    		<div class="downarrow">
+	    		<div class="downarrow" id="to_casestudies">
 	   				<a href="#thirdPage">
 	   				<p>Case Studies</p> 
 	   				<img src="assets/downarrow_red.png">
@@ -271,21 +277,15 @@
 	    		<h2>Start making an impact.</h2>
 	    		<div id="selectstartup" class="subtext" >
 					<h3>
-						<a href="startups.html">I'm a startup.</a>
+						<a href="startups.html">I'm a startup. &#8702;</a>
 					</h3>
 					<p>See how your business can create universal value.</p>
-					<h4>
-	    				<a href="startups.html">Get started &#8702;</a>
-	    			</h4>
 				</div>
 				<div id="selectstudent" class="subtext">
 				<h3>
-					<a href="students.html">I'm a student.</a>
+					<a href="students.html">I'm a student. &#8702;</a>
 				</h3>
 				<p>Start a Good Inc. University competition at your school.</p>
-				<h4>
-	    			<a href="students.html">Get started &#8702;</a>
-	    		</h4>
 				</div>
 	    	</div>
 	    </div>
@@ -298,6 +298,9 @@
 	<div class="text">
 		<h2>Doing good for the world is good for business.</h2>
 		<p><b>It's not about corporate philanthropy.</b> Sustainable, purpose-driven businesses have advantages in the market that allow them to outperform their more traditional peers.</p>
+		<h4>
+			<a href="#" class="viewcasestudies">See the data &#8702;</a>
+		</h4>
 	</div>
 </div>
 
@@ -389,7 +392,360 @@
 	</div>
 </div>
 
+<!-- Patagonia -->
 
+<div id="template6" class="case">
+	<div class="casetext">
+		<div class="main">
+			<h2>Patagonia</h2>
+			<hr>
+			<p style="padding-top: 20px;"><b>Patagonia grew out of a small company that made tools for climbers. Alpinism remains at the heart of a worldwide business started by a band of climbers and surfers, and the minimalist style they promoted.</b></p> 
 
+			<p>The approach taken towards product design demonstrates a bias for simplicity and utility, honoring the sense of reward that with hard-won grace and moments of connection between us and nature. </p>
+
+			<h3>Patagonia donates time, services and at least 1% of all sales to hundreds of grassroots environmental groups all over the world who work to help reverse the tide.</h3> 
+		 	
+		 	<p>For Patagonia, a love of wild and beautiful places demands participation in the fight to save them, and to help reverse the steep decline in the overall environmental health of our planet.</p>
+		</div>
+		<div class="practices">
+			 
+			<div class="category" style="background-color: #FFD31A;">
+			 	<h5>Workers</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/workers_wellness.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy's healthcare plan covers over 80% of health insurance premiums for employees and families, and domestic partner, civil union, and/or same-sex marriage spousal benefits. They also offer employees over 60 days of paid maternity leave and over 2 weeks paid paternity leave.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum fill in content here.</p> 
+			 		</div>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/workers_engagement.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>85% of Etsy employees answered that they were engaged in the 2014 happiness survey.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum fill in content here.</p> 
+			 		</div>
+			 </div>
+		 	<div  class="category" style="background-color: #F0543A;">	
+			 	<h5>Community</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/community_giving.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy supports the Hacker School, a three-month, full-time program in New York that teaches people how to become better programmers.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Etsy's core competency is its team of talented software developers and engineers. They recognize that there is a growing need for more talented programmers, particularly women, to meet the demands of the future. Sponsoring the Hacker School allows the company to encourage more women to join engineering at Etsy and across the industry.</p> 
+			 		</div>
+			</div>
+			<div  class="category" style="background-color: #40BA87;">
+			 	<h5>Environment</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/environment_emissions.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy tracks, publicly reports, and sets reduction goals for carbon emissions from company operations including energy use, business travel, employee commuting and shipping from the Etsy marketplace.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem ipsum</p> 
+			 		</div>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/environment_life-cycle.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>The company implements waste reduction programs across all offices, globally, diverting more than 34,000 pounds of waste from landfills in 2014.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum</p> 
+			 		</div>
+			 	</div>
+			</div>
+			<div class="main">
+			 	<h4>Funding</h4>
+			 	<hr>
+
+			 	<p><mark>Union Square Ventures</mark>, a venture capital firm that invested in Etsy (and has also invested in Foursquare, Twitter, and Zynga) says B Corps are appealing because the companies that produce the most stakeholder value over the next decade will also produce the best financial returns.</p> 
+
+			 	<p>
+				"Etsy had a spectacular public offering in April 2015. The <mark>IPO netted $267 million</mark> for the crafts marketplace, which saw its share price double on its first day of trading."
+				- Inc. Magazine</p>
+
+				<img src="assets/other/etsy_funding.png">
+				
+			 	<h4>Learn More</h4>
+			 	<hr>
+
+			 	<p><a href="">Etsy's B Corp. Report Card</a></p>
+			 	<p><a href="">Harvard Business Review: Etsy's Hackathon for Good</a></p>
+			 	<p><a href="">Inc. Magazine: Esty IPO Brings B Corps to the Forefront</a></p>
+			</div>
+		</div>
+</div>
+
+<!-- Etsy -->
+
+<div id="template7" class="case">
+	<div class="casetext">
+		<div class="main">
+			<h2>Etsy</h2>
+			<hr>
+			<p style="padding-top: 20px;"><b>Etsy is a marketplace that fosters human connection by bringing together creative small business owners with buyers around the world looking for unique goods with a personal story.</b></p> 
+
+			<p>Etsy's heart and soul is its global community: creative entrepreneurs who run their businesses in the Etsy marketplace, shoppers looking for things they can't find anywhere else, manufacturers who partner with Etsy sellers to help them grow, and Etsy employees who build and nurture the marketplace.</p>
+
+			<h3>Etsy's mission is to reimagine commerce in ways that build a more fulfilling and lasting world.</h3> 
+		 	
+		 	<p>As of September 30, 2015, more than 1.5 million active sellers and 22.6 million active buyers used the platform in nearly every country in the world. In 2014, Etsy sellers grossed more than <mark>$1.93 billion in sales.</mark></p>
+		</div>
+		<div class="practices">
+			 
+			<div class="category" style="background-color: #FFD31A;">
+			 	<h5>Workers</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/workers_wellness.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy's healthcare plan covers over 80% of health insurance premiums for employees and families, and domestic partner, civil union, and/or same-sex marriage spousal benefits. They also offer employees over 60 days of paid maternity leave and over 2 weeks paid paternity leave.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum fill in content here.</p> 
+			 		</div>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/workers_engagement.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>85% of Etsy employees answered that they were engaged in the 2014 happiness survey.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum fill in content here.</p> 
+			 		</div>
+			 </div>
+		 	<div  class="category" style="background-color: #F0543A;">	
+			 	<h5>Community</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/community_giving.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy supports the Hacker School, a three-month, full-time program in New York that teaches people how to become better programmers.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Etsy's core competency is its team of talented software developers and engineers. They recognize that there is a growing need for more talented programmers, particularly women, to meet the demands of the future. Sponsoring the Hacker School allows the company to encourage more women to join engineering at Etsy and across the industry.</p> 
+			 		</div>
+			</div>
+			<div  class="category" style="background-color: #40BA87;">
+			 	<h5>Environment</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/environment_emissions.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy tracks, publicly reports, and sets reduction goals for carbon emissions from company operations including energy use, business travel, employee commuting and shipping from the Etsy marketplace.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem ipsum</p> 
+			 		</div>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/environment_life-cycle.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>The company implements waste reduction programs across all offices, globally, diverting more than 34,000 pounds of waste from landfills in 2014.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum</p> 
+			 		</div>
+			 	</div>
+			</div>
+			<div class="main">
+			 	<h4>Funding</h4>
+			 	<hr>
+
+			 	<p><mark>Union Square Ventures</mark>, a venture capital firm that invested in Etsy (and has also invested in Foursquare, Twitter, and Zynga) says B Corps are appealing because the companies that produce the most stakeholder value over the next decade will also produce the best financial returns.</p> 
+
+			 	<p>
+				"Etsy had a spectacular public offering in April 2015. The <mark>IPO netted $267 million</mark> for the crafts marketplace, which saw its share price double on its first day of trading."
+				- Inc. Magazine</p>
+
+				<img src="assets/other/etsy_funding.png">
+				
+			 	<h4>Learn More</h4>
+			 	<hr>
+
+			 	<p><a href="">Etsy's B Corp. Report Card</a></p>
+			 	<p><a href="">Harvard Business Review: Etsy's Hackathon for Good</a></p>
+			 	<p><a href="">Inc. Magazine: Esty IPO Brings B Corps to the Forefront</a></p>
+			</div>
+		</div>
+</div>
+
+<!-- Method -->
+
+<div id="template8" class="case">
+	<div class="casetext">
+		<div class="main">
+			<h2>Method</h2>
+			<hr>
+			<p style="padding-top: 20px;"><b>Method is the pioneer of premium environmentally-conscious and design-driven home care, fabric care and personal care products. Their mission is to inspire a healthy, happy home revolution with cleaners formulated to put the hurt on dirt without doing harm to people, creatures or our planet.</b></p> 
+
+			<p>In the same way we take the dirt out of cleaning, we strive to eliminate some of business's dirty practices. We believe our business practices and processes should be as clean as the products we make.</p>
+
+			<h3>Method develops formulas and design its products to meet the Cradle to Cradle standard, meaning they consider the past, present and future implications of everything they do.</h3> 
+		 	
+		 	<p>Cradle to Cradle is a philosophy that we apply to every method product, and to the business itself. method was one of the first companies to be recognized as a Cradle to Cradle company, acknowledging our practices from the environmental quality of our products to how we manufacture them. We currently have over 60 products. </mark></p>
+		</div>
+		<div class="practices">
+			 
+			<div class="category" style="background-color: #FFD31A;">
+			 	<h5>Workers</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/workers_wellness.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy's healthcare plan covers over 80% of health insurance premiums for employees and families, and domestic partner, civil union, and/or same-sex marriage spousal benefits. They also offer employees over 60 days of paid maternity leave and over 2 weeks paid paternity leave.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum fill in content here.</p> 
+			 		</div>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/workers_engagement.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>85% of Etsy employees answered that they were engaged in the 2014 happiness survey.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum fill in content here.</p> 
+			 		</div>
+			 </div>
+		 	<div  class="category" style="background-color: #F0543A;">	
+			 	<h5>Community</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/community_giving.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy supports the Hacker School, a three-month, full-time program in New York that teaches people how to become better programmers.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Etsy's core competency is its team of talented software developers and engineers. They recognize that there is a growing need for more talented programmers, particularly women, to meet the demands of the future. Sponsoring the Hacker School allows the company to encourage more women to join engineering at Etsy and across the industry.</p> 
+			 		</div>
+			</div>
+			<div  class="category" style="background-color: #40BA87;">
+			 	<h5>Environment</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/environment_emissions.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy tracks, publicly reports, and sets reduction goals for carbon emissions from company operations including energy use, business travel, employee commuting and shipping from the Etsy marketplace.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem ipsum</p> 
+			 		</div>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/environment_life-cycle.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>The company implements waste reduction programs across all offices, globally, diverting more than 34,000 pounds of waste from landfills in 2014.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum</p> 
+			 		</div>
+			 	</div>
+			</div>
+			<div class="main">
+			 	<h4>Funding</h4>
+			 	<hr>
+
+			 	<p><mark>Union Square Ventures</mark>, a venture capital firm that invested in Etsy (and has also invested in Foursquare, Twitter, and Zynga) says B Corps are appealing because the companies that produce the most stakeholder value over the next decade will also produce the best financial returns.</p> 
+
+			 	<p>
+				"Etsy had a spectacular public offering in April 2015. The <mark>IPO netted $267 million</mark> for the crafts marketplace, which saw its share price double on its first day of trading."
+				- Inc. Magazine</p>
+
+				<img src="assets/other/etsy_funding.png">
+				
+			 	<h4>Learn More</h4>
+			 	<hr>
+
+			 	<p><a href="">Etsy's B Corp. Report Card</a></p>
+			 	<p><a href="">Harvard Business Review: Etsy's Hackathon for Good</a></p>
+			 	<p><a href="">Inc. Magazine: Esty IPO Brings B Corps to the Forefront</a></p>
+			</div>
+		</div>
+</div>
+
+<!-- Warby Parker -->
+
+<div id="template9" class="case">
+	<div class="casetext">
+		<div class="main">
+			<h2>Warby Parker</h2>
+			<hr>
+			<p style="padding-top: 20px;"><b>A collaboration between four close friends, Warby Parker was conceived as an alternative to the overpriced and bland eyewear available today.</b></p> 
+
+			<p>Prescription eyewear simply should not cost $300+. The industry is controlled by a few large companies that have kept prices artificially high, reaping huge profits from consumers who have no other options. By circumventing traditional channels and engaging with customers directly through their website, Warby Parker is able to provide high-quality, beautifully designed prescription eyewear for only $95.</p>
+
+			<h3>Even at $95, there are almost a billion people without access to glasses, so for every pair sold, Warby Parker provides one to someone in need.</h3> 
+		 	
+		 	<p>Being a B Corporation allows Warby Parker to account for the commitments they are making to their customers, their employees, the environment and the community at large.</p>
+		</div>
+		<div class="practices">
+			 
+			<div class="category" style="background-color: #FFD31A;">
+			 	<h5>Workers</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/workers_wellness.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy's healthcare plan covers over 80% of health insurance premiums for employees and families, and domestic partner, civil union, and/or same-sex marriage spousal benefits. They also offer employees over 60 days of paid maternity leave and over 2 weeks paid paternity leave.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum fill in content here.</p> 
+			 		</div>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/workers_engagement.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>85% of Etsy employees answered that they were engaged in the 2014 happiness survey.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum fill in content here.</p> 
+			 		</div>
+			 </div>
+		 	<div  class="category" style="background-color: #F0543A;">	
+			 	<h5>Community</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/community_giving.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy supports the Hacker School, a three-month, full-time program in New York that teaches people how to become better programmers.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Etsy's core competency is its team of talented software developers and engineers. They recognize that there is a growing need for more talented programmers, particularly women, to meet the demands of the future. Sponsoring the Hacker School allows the company to encourage more women to join engineering at Etsy and across the industry.</p> 
+			 		</div>
+			</div>
+			<div  class="category" style="background-color: #40BA87;">
+			 	<h5>Environment</h5>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/environment_emissions.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>Etsy tracks, publicly reports, and sets reduction goals for carbon emissions from company operations including energy use, business travel, employee commuting and shipping from the Etsy marketplace.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem ipsum</p> 
+			 		</div>
+			 		<div class="icon">
+			 			<img src="assets/illustrations/environment_life-cycle.png">
+			 		</div>
+			 		<div class="description">
+			 			<p>The company implements waste reduction programs across all offices, globally, diverting more than 34,000 pounds of waste from landfills in 2014.</p>
+
+			 			<p><b>Why it's good for Etsy:</b> Lorem Ipsum</p> 
+			 		</div>
+			 	</div>
+			</div>
+			<div class="main">
+			 	<h4>Funding</h4>
+			 	<hr>
+
+			 	<p><mark>Union Square Ventures</mark>, a venture capital firm that invested in Etsy (and has also invested in Foursquare, Twitter, and Zynga) says B Corps are appealing because the companies that produce the most stakeholder value over the next decade will also produce the best financial returns.</p> 
+
+			 	<p>
+				"Etsy had a spectacular public offering in April 2015. The <mark>IPO netted $267 million</mark> for the crafts marketplace, which saw its share price double on its first day of trading."
+				- Inc. Magazine</p>
+
+				<img src="assets/other/etsy_funding.png">
+				
+			 	<h4>Learn More</h4>
+			 	<hr>
+
+			 	<p><a href="">Etsy's B Corp. Report Card</a></p>
+			 	<p><a href="">Harvard Business Review: Etsy's Hackathon for Good</a></p>
+			 	<p><a href="">Inc. Magazine: Esty IPO Brings B Corps to the Forefront</a></p>
+			</div>
+		</div>
+</div>
 
 </html>
