@@ -360,77 +360,77 @@ $(document).ready(function() {
 
 
 
-$('.explore').on('click', function () {
-    $('.explore').css("visibility", "hidden");   
-    $('.colorblock').addClass('activated'); 
-    $('#to_casestudies').css("visibility", "visible");
+        $('.explore').on('click', function () {
+            $('.explore').css("visibility", "hidden");   
+            $('.colorblock').addClass('activated'); 
+            $('#to_casestudies').css("visibility", "visible");
 
-    $('.righthalf').on('mouseenter', function () {
-        $('.righthalf').addClass('righthalfhover');
-    });
+            $('.righthalf').on('mouseenter', function () {
+                $('.righthalf').addClass('righthalfhover');
+            });
 
-    $('.righthalf').on('mouseover', function () {
-        $('.righthalf').addClass('righthalfhover');
-    });
+            $('.righthalf').on('mouseover', function () {
+                $('.righthalf').addClass('righthalfhover');
+            });
 
-    $('.righthalf').on('mouseleave', function () {
-        $('.righthalf').removeClass('righthalfhover');
+            $('.righthalf').on('mouseleave', function () {
+                $('.righthalf').removeClass('righthalfhover');
 
-    }); 
-
-
-    if ($('.colorblock').hasClass('activated')) {
-        $('.colorblock').on('click', setBlock);
-
-    }
+            }); 
 
 
+            if ($('.colorblock').hasClass('activated')) {
+                $('.colorblock').on('click', setBlock);
 
-    function setBlock (flagBlock) {
-
-        var selectedBlock = $(this);
-
-        if (flagBlock && !flagBlock.timeStamp) {
-            selectedBlock = $(flagBlock);
-        }
-
-        $('.colorblock').removeClass('selected');
-        selectedBlock.addClass('selected');
-        $('.righthalf').addClass('blockselected');
-        $('.lefthalf').css({opacity: 0}).animate({opacity: 1}, 400);
-
-        if (selectedBlock.hasClass('block1')) {
-            $('.holder').html($('#template1').clone());
-        }
-
-        if (selectedBlock.hasClass('block2')) {
-            $('.holder').html($('#template2').clone());
-        }
-
-        if (selectedBlock.hasClass('block3')) {
-            $('.holder').html($('#template3').clone());
-        }
-
-        if (selectedBlock.hasClass('block4')) {
-            $('.holder').html($('#template4').clone());
-        }
-
-        $('.howclose').css("visibility", "visible");
-    }
+            }
 
 
-    $('.howclose').on('click', function () {
-            $('.holder').html($('#template0').clone());
-            $('.howclose').css("visibility", "hidden");
-            $('.righthalf').removeClass('blockselected');
-            $('.colorblock').removeClass('selected');
 
-    });
+            function setBlock (flagBlock) {
 
-    setBlock(document.getElementsByClassName('block1')[0]);
+                var selectedBlock = $(this);
+
+                if (flagBlock && !flagBlock.timeStamp) {
+                    selectedBlock = $(flagBlock);
+                }
+
+                $('.colorblock').removeClass('selected');
+                selectedBlock.addClass('selected');
+                $('.righthalf').addClass('blockselected');
+                $('.lefthalf').css({opacity: 0}).animate({opacity: 1}, 400);
+
+                if (selectedBlock.hasClass('block1')) {
+                    $('.holder').html($('#template1').clone());
+                }
+
+                if (selectedBlock.hasClass('block2')) {
+                    $('.holder').html($('#template2').clone());
+                }
+
+                if (selectedBlock.hasClass('block3')) {
+                    $('.holder').html($('#template3').clone());
+                }
+
+                if (selectedBlock.hasClass('block4')) {
+                    $('.holder').html($('#template4').clone());
+                }
+
+                $('.howclose').css("visibility", "visible");
+            }
 
 
-});
+            $('.howclose').on('click', function () {
+                    $('.holder').html($('#template0').clone());
+                    $('.howclose').css("visibility", "hidden");
+                    $('.righthalf').removeClass('blockselected');
+                    $('.colorblock').removeClass('selected');
+
+            });
+
+            setBlock(document.getElementsByClassName('block1')[0]);
+
+
+        });
 
 
 

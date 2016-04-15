@@ -1024,6 +1024,35 @@ Startups 2, 3, 4
 }
 
 
+/***********************************************************************************************************************************************************
+Startups 5
+***********************************************************************************************************************************************************/
+
+
+#startups_5 .righthalf table{
+	width: 80%;
+	margin: auto;
+	margin-top: 20%;
+	font-size: 13pt;
+	font-weight: 500;
+}
+
+#startups_5 .righthalf table tr{
+    vertical-align: top;
+    color: #2E1C4F;
+}
+
+#startups_5 .righthalf table td{
+	padding: 15px 20px 15px 20px;
+
+}
+
+.white1 {
+	background-color: rgba(255, 255, 255, .8);
+}
+.whiterow {
+	background-color: rgba(255, 255, 255, 0.29);
+}
 
 /***********************************************************************************************************************************************************
 Startups 6
@@ -1041,6 +1070,25 @@ Startups 6
 #startups_6 p{
 	color: white;
 	text-align: center;
+}
+
+#startups_6 img {
+	height: 200px;
+	display: inline-block;
+	padding-top: 50px;
+	padding-left: 50px;
+	cursor: pointer;
+}
+
+#startups_6 img:hover {
+	opacity: .6;
+	transition: all ease-in-out .4s;
+}
+
+
+#startups_6 h4 {
+	padding-left: 100px;
+	padding-top: 20px;
 }
 
 
@@ -1312,8 +1360,44 @@ Startups 5
 	margin: 20px;
 	padding-top: 20px;
 	width: 400px;
+	color: white;
 	
 }
+
+#students_5 button {
+	width: 200px;
+	height: 60px;
+	z-index: 160;
+	border: solid 2px white;
+	text-align: center;
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+	background-color: transparent;
+	position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 50px;
+}
+
+#students_5 button:hover {
+	background-color: white;
+	opacity: .9;
+}
+
+#students_5 button:hover h4 {
+	color: black;
+}
+
+#students_5 button h4 {
+	color: white;
+	font-family: freight-micro-pro;
+	font-style: italic;
+	font-size: 18pt;
+	font-weight: 500;
+	margin: 14px;
+	margin-top: 0px;
+}
+
 
 /***********************************************************************************************************************************************************
 Startups 1
@@ -1396,6 +1480,11 @@ Media Queries
 .casetext .category {
 	padding: 100px 100px 100px 100px;
 }
+
+#startups_5 .righthalf table{ 
+	margin-top: 15%;
+	font-size: 10pt;
+	}
 
 
 }
