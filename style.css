@@ -14,7 +14,7 @@ h2 {
 	font-weight: 300;
 	font-size: 60pt;
 	color: #40BA87;
-	line-height: 1.3;
+	line-height: 1.2;
 }
 
 
@@ -68,6 +68,33 @@ mark {
 }
 
 
+input {
+	border: 0px;
+	border-bottom: 1px solid white;
+	background-color: transparent;
+	font-family: freight-sans-pro;
+	font-size: 20pt;
+	font-weight: 500;
+}
+
+input [type=text]:focus {
+	outline: none;
+
+}
+
+/***********************************************************************************************************************************************************
+
+***********************************************************************************************************************************************************/
+
+.opacityzero {
+	opacity: 0;
+	transition: ease-in-out all .3s;
+}
+
+.opacityone {
+	opacity: 1;
+	transition: ease-in-out all .3s;
+}
 
 /***********************************************************************************************************************************************************
 Nav
@@ -309,6 +336,11 @@ Home 0
 	margin: auto;
 }
 
+.subhead h3 {
+	font-size: 23pt; 
+	padding-top: 10px;
+}
+
 #home_0 .downarrow p {
 	color: white;
 	opacity: .5;
@@ -354,7 +386,7 @@ Home 1
 	font-family: freight-micro-pro;
 	font-style: italic;
 	font-size: 18pt;
-	font-weight: 600;
+	font-weight: 500;
 	margin: 14px;
 }
 
@@ -444,6 +476,7 @@ Home 1
     color: white;
     font-size: 17pt;
 }
+
 #img1 {
 	background-image: url("assets/illustrations/block1.png");
 }
@@ -463,10 +496,6 @@ Home 1
 .block2 img, .block3 img {
 	position: relative;
 	left: -30px;
-}
-
-.holder {
-
 }
 
 .block1 {
@@ -593,142 +622,129 @@ Home 2
 ***********************************************************************************************************************************************************/
 
 #home_2 .lefthalf {
-	background-image: url("assets/photos/company_patagonia.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 	transition: opacity 0.2s ease-in-out;
 	transition: width 0.3s ease-in-out;
 	transition: background-image .3s ease-in-out;
 	z-index: 0;
 }
 
-.casestudies {
-	width: 50%;
-	height: 100px;
-	position: absolute;
-	bottom: 0;
-	z-index: 100;
-
-}
-
-
-.companynames {
-    width: 100%;
-    height: ;
-    position: absolute;
-    bottom: 0;
-    left: 2px;
-    z-index: 100;
-    margin-bottom: -3px;
-}
-
-.companynames img {
+.howclose_company {
 	float: left;
-    padding: 40px;
+    background-image: url('assets/x.png');
+    width: 57px;
+    height: 58px;
+    z-index: 1000;
+    margin: 50px;
+    visibility: hidden;
+    cursor: pointer;
 }
 
-.name {
-	width: 25%;
-	height: 100px;
-	display: inline-block;
-	margin: -2px;
-	transition: all ease .2s;
-}
-
-.nameexpanded {
-	height:200px;
-	width: 25%;
-	display: inline-block;
-	margin: -2px;
-	transition: all ease .3s;
-	z-index: 100;
-}
-
-.name:hover {
-	height:200px;
-	transition: all ease .2s;
-}
-
-
-/** after slide up **/
-
-.casestudiesexpanded {
-	width: 100%;
-    height: inherit;
-    position: relative;
-    top: 100%;
-    opacity: 0;
-    z-index: 50;
-    transition: top .4s ease;
-    transition-delay: top .1s;
-}
-
-.casestudiesexpanded .close {
-	width: 100px;
-	height: 50px;
-	background-color: black;
-	position: absolute;
-	top: 0; 
-	left: 50%;
-	margin-left: -50px;
-	color: white;
+.companyblock {
+	width: 50%;
+	height: 50%;
+	position: relative;
+	float: left;
+	background-image: url("assets/grid.png");
 	text-align: center;
+	z-index: 0;
+	cursor: pointer;
+	transition: ease-in-out all .3s;
 }
-.casestudiesexpanded .photo {
-	width: 25%;
-	height: 100%;
-	display: inline-block;
-	margin: -2px; 
+
+.blocklogo {
+    width: 200px;
+    height: 50px;
+    z-index: 50;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -100px;
+    text-align: center;
+
+}
+
+.companyblock.block1 {
+	background-image: url("assets/photos/company_patagonia.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	transition: all ease .5s;
 }
 
-.casestudiesexpanded .photo1 {
-	background-image:  url("assets/photos/company_patagonia.jpg");
+.companyblock.block2 {
+	background-image: url("assets/photos/company_etsy.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-.casestudiesexpanded .photo2 {
-	background-image:  url("assets/photos/company_warbyparker.jpg");
+.companyblock.block3 {
+	background-image: url("assets/photos/company_method.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-.casestudiesexpanded .photo3 {
-	background-image:  url("assets/photos/company_etsy.jpg");
+.companyblock.block4 {
+	background-image: url("assets/photos/company_warbyparker.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-.casestudiesexpanded .photo4 {
-	background-image:  url("assets/photos/company_method.jpg");
+#logo1 {
+	background-image: url("assets/logos/patagonia.png");
 }
 
-.casestudiesexpanded .textarea {
-	width: 0px;
-	height: 100%;
+#logo2 {
+	background-image: url("assets/logos/etsy.png");
+}
+
+#logo3 {
+	background-image: url("assets/logos/method.png");
+}
+
+#logo4 {
+	background-image: url("assets/logos/warbyparker.png");
+}
+
+.explore_casestudies {
+	width: 300px;
+	height: 60px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -150px;
+	margin-top: -30px;
+	z-index: 160;
+	border: solid 2px white;
+	text-align: center;
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+}
+
+.explore_casestudies:hover {
 	background-color: white;
-	display: inline-block;
-	transition: all ease .5s;
-	margin:-2px;
-	vertical-align: top;
+	opacity: .9;
 }
 
-.showtext {
-	display: none;
-	transition: all ease-in-out .5s;
+.explore_casestudies:hover h4 {
+	color: black;
 }
 
-.showtext .text {
-	width: inherit;
-	height: 100%;
-	padding-left: 100px;
-	padding-right: 100px;
-	overflow: scroll;
-
+.explore_casestudies h4 {
+	color: white;
+	font-family: freight-micro-pro;
+	font-style: italic;
+	font-size: 18pt;
+	font-weight: 500;
+	margin: 14px;
 }
 
-.textarea1 {
-	transition: all ease .5s;
+.blockselected .companyblock.selected .colorblock_overlay {
+	opacity: 0;
 }
+
 /***********************************************************************************************************************************************************
 Home 3
 ***********************************************************************************************************************************************************/
@@ -860,6 +876,8 @@ Startups 2, 3, 4
 }
 
 
+
+
 #startups_3 .steps .item h5 {
 	color: white;
 }
@@ -881,7 +899,16 @@ Startups 2, 3, 4
 	position: relative;
     left: 50%;
     margin-left: -125px;
+    top: 0px;
+    transition: ease-in-out top .4s;
 }
+
+
+.steps .item img:hover {
+	top: -30px;
+}
+
+
 
 /***********************************************************************************************************************************************************
 Startups 6
@@ -900,8 +927,6 @@ Startups 6
 	color: white;
 	text-align: center;
 }
-
-
 
 
 /***********************************************************************************************************************************************************
@@ -1132,6 +1157,38 @@ blockquote {
 	left: 1400px;
 	top: 0px;
 	width: 850px;
+}
+
+
+/***********************************************************************************************************************************************************
+Startups 5
+***********************************************************************************************************************************************************/
+
+
+#students_5 .text{
+	width: 50%;
+	margin: auto;
+}
+#students_5 h2{
+	color: white;
+	text-align: center;
+}
+
+#students_5 p{
+	color: white;
+	text-align: center;
+}
+
+#students_5 form {
+	text-align: center;
+	
+}
+
+#students_5 input {
+	margin: 20px;
+	padding-top: 20px;
+	width: 400px;
+	
 }
 
 /***********************************************************************************************************************************************************

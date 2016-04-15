@@ -33,11 +33,26 @@ $(document).ready(function() {
 
     }
 
+    $('.steps .item img').addClass('up_onload');
+
     $('#fullpage').fullpage({
         anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage'],
-        touchSensitivity: 20,
+        scrollingSpeed: 1000,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 1000,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
         normalScrollElements: '.showtext',
+        afterLoad: function (index) {
+            currentIndex = index;
+            $('.up_onload').css({'visibility':'visible'});
+            $('.up_onload').addClass('animated fadeInUp');
+        },
         onLeave: function(index, nextIndex, direction){
+                $('.up_onload').css({'visibility':'hidden'});
+                $('.up_onload').removeClass('animated fadeInUp');
+
             if (nextIndex === 1){
                 $('.colorblock').css({opacity: 0});
                 $('.words1').css({opacity: '1'});
@@ -117,10 +132,15 @@ $(document).ready(function() {
                 }
 
             } else if (nextIndex === 3){
-                $('.righthalf').css({opacity: 0}).delay(400).animate({opacity: 1}, 400);
-                $('.lefthalf').css({opacity: 0}).delay(600).animate({opacity: 1}, 400);
-                $('.downarrow').css({opacity: 0}).delay(1000).animate({opacity: 1}, 400);
-                $('.casestudies').css({opacity: 0}).delay(600).animate({opacity: 1}, 200);
+                $('.block1').css({opacity: 0}).delay(400).animate({opacity: 1}, 400);
+                $('.block2').css({opacity: 0}).delay(600).animate({opacity: 1}, 400);
+                $('.block3').css({opacity: 0}).delay(800).animate({opacity: 1}, 400);
+                $('.block4').css({opacity: 0}).delay(1000).animate({opacity: 1}, 400);
+                $('.explore_casestudies').css({opacity: 0}).delay(1200).animate({opacity: 1}, 600);
+                $('.righthalf').animate({opacity: 0}, 400).delay(400).animate({opacity: 1}, 400);
+                $('.lefthalf').animate({opacity: 0}, 400).delay(600).animate({opacity: 1}, 400);
+                $('.downarrow').animate({opacity: 0}, 400).delay(1000).animate({opacity: 1}, 400);
+                $('.casestudies').animate({opacity: 0}, 400).delay(600).animate({opacity: 1}, 200);
 
                 $('.words1').css({opacity: '0'});
                 $('.inner-circle1').css({opacity: '0'});
@@ -314,10 +334,7 @@ $(document).ready(function() {
 
 
 
-
-
 ////////// COLOR BLOCKS ////////////
-
 
 
 
@@ -344,8 +361,16 @@ $('.explore').on('click', function () {
 
     }
 
-    function setBlock () {
+
+
+    function setBlock (flagBlock) {
+
         var selectedBlock = $(this);
+
+        if (flagBlock && !flagBlock.timeStamp) {
+            selectedBlock = $(flagBlock);
+        }
+
         $('.colorblock').removeClass('selected');
         selectedBlock.addClass('selected');
         $('.righthalf').addClass('blockselected');
@@ -379,154 +404,89 @@ $('.explore').on('click', function () {
 
     });
 
+    setBlock(document.getElementsByClassName('block1')[0]);
+
 
 });
 
 
-    $('.name').on('click', function () {
-        $('.casestudies').css("width", "100%");
-        $('#home_2 .lefthalf').css("opacity", "0");
-        $('.name').css("visibility", "hidden");
-        $('.casestudiesexpanded').css("top", "0");
-        $('.casestudiesexpanded').css("opacity", "1");
+
+////////// CASE STUDIES ////////////
+
+
+$('.explore_casestudies').on('click', function () {
+    $('.explore_casestudies').css("visibility", "hidden");   
+    $('.companyblock').addClass('activated'); 
+
+    $('.lefthalf').on('mouseenter', function () {
+        $('.lefthalf').addClass('lefthalfhover');
     });
 
-    $('.close').on('click', function () {
-        $('.casestudies').css("width", "50%");
-        $('#home_2 .lefthalf').css("opacity", "1");
-        $('.name').css("visibility", "visible");
-        $('.casestudiesexpanded').css("top", "100%");
-        $('.casestudiesexpanded').css("opacity", "0");
+    $('.lefthalf').on('mouseover', function () {
+        $('.lefthalf').addClass('lefthalfhover');
     });
 
+    $('.lefthalf').on('mouseleave', function () {
+        $('.lefthalf').removeClass('lefthalfhover');
+
+    }); 
+
+
+    if ($('.companyblock').hasClass('activated')) {
+        $('.companyblock').on('click', setCompanyBlock);
+
+    }
 
 
 
+    function setCompanyBlock (flagBlock) {
 
-    $('.photo1').on('click', function () {
-        if ($('.photo1').hasClass('photo1clicked')) {
-            $('.textarea1').css("width", "0%");
-            $('.photo1').css("width", "25%");
-            $('.photo2').css("width", "25%");
-            $('.photo3').css("width", "25%");
-            $('.photo4').css("width", "25%");
-            $('.showtext1').css("display", "none");
-            $('.photo1').removeClass('photo1clicked');
-        } else {
+        var selectedBlock = $(this);
 
-            if (!$('.photo2').hasClass('photo2clicked') 
-            && !$('.photo3').hasClass('photo3clicked') 
-            && !$('.photo4').hasClass('photo4clicked')) {
-
-                $('.textarea1').css("width", "39%");
-                $('.photo2').css("width", "12%");
-                $('.photo3').css("width", "12%");
-                $('.photo4').css("width", "12%");
-                setTimeout(function() { 
-                    $('.showtext1').css("display", "inline");
-                }, 400);
-                $('.photo1').addClass('photo1clicked');
-            }
+        if (flagBlock && !flagBlock.timeStamp) {
+            selectedBlock = $(flagBlock);
         }
-    });
 
-    $('.photo2').on('click', function () {
-        if ($('.photo2').hasClass('photo2clicked')) {
-            $('.textarea2').css("width", "0%");
-            $('.photo1').css("width", "25%");
-            $('.photo2').css("width", "25%");
-            $('.photo3').css("width", "25%");
-            $('.photo4').css("width", "25%");
-            $('.showtext2').css("display", "none");
-            $('.photo2').removeClass('photo2clicked');
-        } else {
+        $('.companyblock').removeClass('selected');
+        selectedBlock.addClass('selected');
+        $('.lefthalf').addClass('blockselected');
+        $('.righthalf').css({opacity: 0}).animate({opacity: 1}, 400);
 
-            if (!$('.photo1').hasClass('photo1clicked') 
-            && !$('.photo3').hasClass('photo3clicked') 
-            && !$('.photo4').hasClass('photo4clicked')) {
-
-                $('.textarea2').css("width", "39%");
-                $('.photo1').css("width", "12%");
-                $('.photo3').css("width", "12%");
-                $('.photo4').css("width", "12%");
-                setTimeout(function() { 
-                    $('.showtext2').css("display", "inline");
-                }, 400);
-                $('.photo2').addClass('photo2clicked');
-            }
+        if (selectedBlock.hasClass('block1')) {
+            $('.holder_company').html($('#template6').clone());
         }
-    });
 
-    $('.photo3').on('click', function () {
-        if ($('.photo3').hasClass('photo3clicked')) {
-            $('.textarea3').css("width", "0%");
-            $('.photo1').css("width", "25%");
-            $('.photo2').css("width", "25%");
-            $('.photo3').css("width", "25%");
-            $('.photo4').css("width", "25%");
-            $('.showtext3').css("display", "none");
-            $('.photo3').removeClass('photo3clicked');
-        } else {
-
-            if (!$('.photo1').hasClass('photo1clicked') 
-            && !$('.photo2').hasClass('photo3clicked') 
-            && !$('.photo4').hasClass('photo4clicked')) {
-
-                $('.textarea3').css("width", "39%");
-                $('.photo1').css("width", "12%");
-                $('.photo2').css("width", "12%");
-                $('.photo4').css("width", "12%");
-                setTimeout(function() { 
-                    $('.showtext3').css("display", "inline");
-                }, 400);
-                $('.photo3').addClass('photo3clicked');
-            }
+        if (selectedBlock.hasClass('block2')) {
+            $('.holder_company').html($('#template7').clone());
         }
-    });
 
-    $('.photo4').on('click', function () {
-        if ($('.photo4').hasClass('photo4clicked')) {
-            $('.textarea4').css("width", "0%");
-            $('.photo1').css("width", "25%");
-            $('.photo2').css("width", "25%");
-            $('.photo3').css("width", "25%");
-            $('.photo4').css("width", "25%");
-            $('.showtext4').css("display", "none");
-            $('.photo4').removeClass('photo4clicked');
-        } else {
-
-            if (!$('.photo1').hasClass('photo1clicked') 
-            && !$('.photo2').hasClass('photo3clicked') 
-            && !$('.photo3').hasClass('photo4clicked')) {
-
-                $('.textarea4').css("width", "39%");
-                $('.photo1').css("width", "12%");
-                $('.photo2').css("width", "12%");
-                $('.photo3').css("width", "12%");
-                setTimeout(function() { 
-                    $('.showtext4').css("display", "inline");
-                }, 400);
-                $('.photo4').addClass('photo4clicked');
-            }
+        if (selectedBlock.hasClass('block3')) {
+            $('.holder_company').html($('#template8').clone());
         }
-    });
+
+        if (selectedBlock.hasClass('block4')) {
+            $('.holder_company').html($('#template9').clone());
+        }
+
+        $('.howclose_company').css("visibility", "visible");
+    }
 
 
-    $('.name1').hover(function () {
-        $('#home_2 .lefthalf').css({"background-image": "url(assets/photos/company_patagonia.jpg)"});
+    $('.howclose_company').on('click', function () {
+            $('.holder_company').html($('#template5').clone());
+            $('.howclose_company').css("visibility", "hidden");
+            $('.lefthalf').removeClass('blockselected');
+            $('.companyblock').removeClass('selected');
+            $('.companyblock').removeClass('activated');
+            $('.explore_casestudies').css("visibility", "visible");
+
     });
 
-    $('.name2').hover(function () {
-        $('#home_2 .lefthalf').css({"background-image": "url(assets/photos/company_warbyparker.jpg)"});
-    });
+    setCompanyBlock(document.getElementsByClassName('companyblock block1')[0]);
 
-    $('.name3').hover(function () {
-        $('#home_2 .lefthalf').css({"background-image": "url(assets/photos/company_etsy.jpg)"});
-    });
 
-    $('.name4').hover(function () {
-        $('#home_2 .lefthalf').css({"background-image": "url(assets/photos/company_method.jpg)"});
-    });
+});
+
 
 
 
