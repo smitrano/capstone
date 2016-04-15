@@ -22,7 +22,7 @@ $(document).ready(function() {
         $('#logonav').attr('src','assets/logo_white.png');
 
     }
-    
+
 // menu color switcher //
 
     if ($('body').hasClass('index') ) {
@@ -516,11 +516,31 @@ $('.explore_casestudies').on('click', function () {
 
     $('.rightarrow').on('click', function () {
         $('.special-friend').animate({marginLeft: "-=500px"});
+
+        var marginLeftValue = parseInt($('.special-friend').css('marginLeft'), 10);
+        if (marginLeftValue <= -1001) {
+    
+        $('.special-friend').animate({marginLeft: "+=2000px"});
+
+        }
+
+
+
     });
 
     $('.leftarrow').on('click', function () {
-        $('.special-friend').animate({marginLeft: "+=500px"});
-    });
+        var marginLeftValue = parseInt($('.special-friend').css('marginLeft'), 10);
+        if (marginLeftValue <= -1) {
+            $('.special-friend').animate({marginLeft: "+=500px"});
+            }
+
+     });
+        
+
+         
+
+
+
 
 
 
