@@ -45,7 +45,7 @@ h4 a:hover {
 }
 
 
-h5 {
+h5 {b
 	font-family: freight-micro-pro;
 	font-size: 20pt;
 	font-weight: 400;
@@ -501,7 +501,7 @@ Home 1
 }
 
 #img4 {
-	background-image: url("assets/illustrations/block3.png");
+	background-image: url("assets/illustrations/block4.png");
 }
 
 .block2 img, .block3 img {
