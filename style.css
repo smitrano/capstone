@@ -1440,7 +1440,6 @@ Media Queries
 @media screen and (max-width: 1980px) {
    h1 {
    	font-size: 45pt;
-   	transition: font ease 1s;
    }
 
    h2 {
@@ -1522,7 +1521,6 @@ Media Queries
 @media screen and (max-width: 1200px) { 
 h1 {
    	font-size: 30pt;
-   	transition: font ease 1s;
    }
 
 }
