@@ -45,7 +45,7 @@ h4 a:hover {
 }
 
 
-h5 {b
+h5 {
 	font-family: freight-micro-pro;
 	font-size: 20pt;
 	font-weight: 400;
@@ -1440,6 +1440,7 @@ Media Queries
 @media screen and (max-width: 1980px) {
    h1 {
    	font-size: 45pt;
+   	transition: font ease 1s;
    }
 
    h2 {
@@ -1469,6 +1470,10 @@ Media Queries
 	margin-top: 150px;
    }
 
+#home_3 h3 {
+    font-size: 32pt;
+}
+
 .casetext .main {
 	padding: 50px 100px 50px 150px;
 }
@@ -1487,6 +1492,38 @@ Media Queries
 	}
 
 
+.actionsteps .steps {
+	left: 0px;
+    margin: 0px;
+    padding-top: 50px;
+    width: 100%;
 }
 
+.actionsteps .steps .item {
+	width: 13%;
+	height: 10%;
+	margin: 0px 6% 0px 0px;
+}
+
+.steps .item p {
+    font-size: 12pt;
+}
+
+
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) { 
+h1 {
+   	font-size: 30pt;
+   	transition: font ease 1s;
+   }
+
+}
 
