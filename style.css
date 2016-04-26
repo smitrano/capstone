@@ -93,6 +93,11 @@ input [type=text]:focus {
 
 }
 
+.invisible {
+	visibility: hidden;
+}
+
+
 /***********************************************************************************************************************************************************
 
 ***********************************************************************************************************************************************************/
@@ -589,7 +594,14 @@ Home 1
 	padding-bottom: 3%;
 	color: #2E1C4F;
 	margin: 0px;
+	transition: all ease-in-out .2s;
 }
+
+.howtop h6:hover {
+	padding-left: 10px;
+	transition: all ease-in-out .2s;
+}
+
 
 .howbottom {
 	display: block;
@@ -601,6 +613,11 @@ Home 1
 	color: #F0543A;
 	padding-top: 5px;
 	margin: 0px;
+}
+
+.howbottom h6 a {
+	color: #F0543A;
+	text-decoration: underline;
 }
 
 .howbottom hr {
@@ -1059,7 +1076,7 @@ Startups 6
 ***********************************************************************************************************************************************************/
 
 #startups_6 .text{
-	width: 50%;
+	width: 66%;
 	margin: auto;
 }
 #startups_6 h2{
@@ -1104,7 +1121,7 @@ Students 0
 ***********************************************************************************************************************************************************/
 
 #students_0 .downarrow p {
-	color: white;
+	color: #44286D;
 	opacity: .5;
 }
 
@@ -1119,6 +1136,10 @@ Students 0
 #students_0 .text {
 	width: 45%;
 	margin: auto;
+}
+
+#students_0 h1, #students_0 h3 {
+	color: #44286D;
 }
 
 /***********************************************************************************************************************************************************
@@ -1150,6 +1171,14 @@ Students 2
 	z-index: 100;
 	background-color: black;
 	opacity: .5;
+	transition: all ease-in-out .2s;
+	cursor: pointer;
+	display: none;
+}
+
+.rightarrow:hover {
+	opacity: .9;
+	transition: all ease-in-out .2s;
 }
 
 .leftarrow {
@@ -1161,7 +1190,16 @@ Students 2
 	z-index: 100;
 	background-color: black;
 	opacity: .5;
+	transition: all ease-in-out .2s;
+	cursor: pointer;
+	display: none;
 }
+
+.leftarrow:hover {
+	opacity: .9;
+	transition: all ease-in-out .2s;
+}
+
 
 
 .pastwinner {
@@ -1328,7 +1366,7 @@ blockquote {
 	position: relative;
 	left: 57%;
 	top: 0px;
-	width: 850px;
+	width: 750px;
 }
 
 
@@ -1338,7 +1376,7 @@ Startups 5
 
 
 #students_5 .text{
-	width: 50%;
+	width: 30%;
 	margin: auto;
 }
 #students_5 h2{
@@ -1395,10 +1433,16 @@ Startups 5
 	font-size: 18pt;
 	font-weight: 500;
 	margin: 14px;
-	margin-top: 0px;
+	margin-top: 9px;
 }
 
 
+h5.thanks {
+	display: none;
+	text-align: center;
+	color: white;
+	transition: all ease-in-out .5s;
+}
 /***********************************************************************************************************************************************************
 Startups 1
 ***********************************************************************************************************************************************************/

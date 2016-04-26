@@ -538,7 +538,12 @@ $('.explore_casestudies').on('click', function () {
         
 
          
+ $('#students_5 button').on('click', function () {
+    $('#students_5 form').css("display", "none");
+    $('#students_5 .thanks').css("display", "block");
+    $('#students_5 button').css("display", "none");
 
+     });
 
 
 
