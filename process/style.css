@@ -1,0 +1,104 @@
+body {
+	margin: 0px;
+	font-family: freight-sans-pro;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-size: 35pt;
+	color: #44286D;
+	font-weight: 200;
+	margin-top: 0px;
+}
+
+h2 {
+	margin:0px;
+	padding: 0px;
+	position: relative;
+	left: 1100px;
+	top: 100px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #44286D;
+	text-transform: uppercase;
+	letter-spacing: 1;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+h2 a {
+	text-decoration: underline;
+}
+.sidenav {
+	height: 100%;
+	position: fixed;
+	color: white;
+	font-size: 18pt;
+	font-weight: 400;
+}
+
+
+.sidenav .navitem {
+	height: 16.66%;
+	width: 200px;
+	transition: all ease-in-out .2s;
+}
+
+.navitem:hover {
+	width: 230px;
+	transition: all ease-in-out .2s;
+}
+
+.navitem:hover p{
+	opacity: 1;
+	transition: all ease .2s;
+}
+
+.hovered {
+	width: 230px !important;
+	transition: all ease-in-out .2s;
+}
+
+.navitem p {
+	margin: 0px;
+	padding: 70px 20px 0px 30px;
+	opacity: .5;
+	transition: all ease .2s;
+	color: white;
+}
+
+.navitem.one { background-color: #44286D;}
+.navitem.two { background-color: #663163;}
+.navitem.three { background-color: #883A59;}
+.navitem.four { background-color: #AB424E;}
+.navitem.five { background-color: #CD4B44;}
+.navitem.six { background-color: #EF543A;}
+
+
+
+.section {
+	padding: 100px;
+}
+
+.wrapper {
+	margin-left: 200px;
+}
+
+img {
+	margin: 50px;
+}
+
+video, audio {
+	margin: 50px;
+}
+
+#pt1 img, #pt2 img {
+	border: solid 1px black;
+}
+
+.border {
+	border: 1px solid black;
+}
